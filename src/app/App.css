@@ -1,5 +1,0 @@
-:root{
-    --index: calc(1vw + 1vh);
-    --size: calc(var(--index) * 2);
-    --text-size: calc((var(--size)/5) * 2);
-}
