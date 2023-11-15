@@ -14,6 +14,7 @@ const InfoGuest: FC<InfoGuestProps> = ({visible, surname, name}) => {
           <div className='info_guest-header'>
             <div className='info_guest-title'>Participant form</div>
           </div>
+          {/*Весь контент в сплывающем окне*/}
           <ul className='info_guest-body'>
             <li className='info_guest-name'>
               <div className='info_guest-name-title'>Participant name</div>
@@ -26,6 +27,7 @@ const InfoGuest: FC<InfoGuestProps> = ({visible, surname, name}) => {
             <li className='info_guest-statement'>
               <div className='info_guest-statement-title'>Copy of statement <span>*</span></div>
               <div className='info_guest-statement-content'>
+                {/*Галочка для выбора между тем есть ли у посетителя копия документа или нет*/}
                 <ul className='Yes_No'>
                   <li>
                       <input type={"radio"} className='radio' id='radio-1'/>
@@ -36,6 +38,7 @@ const InfoGuest: FC<InfoGuestProps> = ({visible, surname, name}) => {
                     <label htmlFor='radio-2'>No</label>
                   </li>
                 </ul>
+                {/*Создание фото или загрузка его на сайт*/}
                 <ul className='Upload_Take_Photo'>
                   <li>
                     <input type={"file"} id='file-1'/>
@@ -61,7 +64,7 @@ const InfoGuest: FC<InfoGuestProps> = ({visible, surname, name}) => {
                 </ul>
                 <ul className='Upload_Take_Photo'>
                   <li>
-                    <input type={"file"} id='file-1'/>
+                    <input type={"file"} id='file-2'/>
                   </li>
                   <li>
                     <button>Take photo</button>
@@ -70,6 +73,7 @@ const InfoGuest: FC<InfoGuestProps> = ({visible, surname, name}) => {
               </div>
             </li>
           </ul>
+          {/*Кнопка подтверждения*/}
           <button>Submit</button>
         </div>
       </div>
