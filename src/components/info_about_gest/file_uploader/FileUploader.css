@@ -1,0 +1,35 @@
+input[type="file"] {
+    display: none;
+}
+
+.file_name{
+    margin-top: -15px;
+}
+.icon_name{
+    display: flex;
+    flex-direction: row;
+    flex-group: 1;
+    justify-content: center;
+}
+
+.icon_name svg{
+    margin-right: 5px;
+    margin-top: 2px;
+}
+
+ul li{
+    margin-right: 14px;
+}
+p svg{
+    width: 14px;
+    height: 14px;
+    flex-shrink: 0;
+}
+p{
+    color: #8E8E8E;
+    font-family: Alata, serif;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}

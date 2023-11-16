@@ -44,6 +44,10 @@ body{
 .Yes_No li{
     display: inline-block;
     margin-top: 0;
+    margin-right: 60px;
+}
+.Yes_No li input{
+    margin-right: 8px;
 }
 
 .info_guest-name-title{
@@ -79,4 +83,91 @@ body{
     font-weight: 400;
     line-height: normal;
     color: #40BA21;
+}
+
+.info_guest-statement-title span{
+    color: #E54600;
+}
+
+.info_guest-passport-title span{
+    color: #E54600;
+}
+
+.button_submit{
+    position: relative;
+    font-family: Alata, serif;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    width: 244px;
+    padding: 1px 89px 3px 89px ;
+    flex-shrink: 0;
+    border-radius: 5px;
+    color: #ffffff;
+    background: #40BA21;
+    top: 79px;
+}
+.button_submit:active{
+    color: #40BA21;
+    background: #FFFFFF;
+    border: 1px solid #40BA21;
+}
+.upload_take_photo li{
+    display: inline-block;
+}
+
+input[type="radio"][name="statement-choice"]:checked + label[for="radio-2-statement"] ~ .upload_take_photo,
+input[type="radio"][name="statement-choice"]:checked + label[for="radio-2-statement"] ~ .button_submit {
+    display: none;
+}
+
+input[type="radio"][name="passport-choice"]:checked + label[for="radio-2-passport"] ~ .upload_take_photo,
+input[type="radio"][name="passport-choice"]:checked + label[for="radio-2-passport"] ~ .button_submit {
+    display: none;
+}
+.radio_button+label::before{
+    background-color: #40BA21;
+}
+
+.take_photo_passport{
+    color: rgba(30, 30, 30, 0.50);
+    font-family: Alata, serif;
+    font-size: 10px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    border-radius: 5px;
+    padding: 5px 26px 5px 9px;
+    background: rgba(64, 186, 33, 0.80);
+    display: flex;
+    flex-direction: row;
+    flex-group: 1;
+    justify-content: center;
+}
+
+.take_photo_passport svg{
+    margin-right: 6px;
+    fill-opacity: 50%;
+}
+
+.upload_photo_statement{
+    color: rgba(30, 30, 30, 0.50);
+    font-family: Alata, serif;
+    font-size: 10px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    border-radius: 5px;
+    padding: 5px 26px 5px 9px;
+    background: rgba(64, 186, 33, 0.80);
+    display: flex;
+    flex-direction: row;
+    flex-group: 1;
+    justify-content: center;
+}
+
+.upload_photo_statement svg{
+    margin-right: 6px;
+    fill-opacity: 50%;
 }
