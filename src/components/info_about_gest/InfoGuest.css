@@ -130,44 +130,4 @@ input[type="radio"][name="passport-choice"]:checked + label[for="radio-2-passpor
     background-color: #40BA21;
 }
 
-.take_photo_passport{
-    color: rgba(30, 30, 30, 0.50);
-    font-family: Alata, serif;
-    font-size: 10px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: normal;
-    border-radius: 5px;
-    padding: 5px 26px 5px 9px;
-    background: rgba(64, 186, 33, 0.80);
-    display: flex;
-    flex-direction: row;
-    flex-group: 1;
-    justify-content: center;
-}
 
-.take_photo_passport svg{
-    margin-right: 6px;
-    fill-opacity: 50%;
-}
-
-.upload_photo_statement{
-    color: rgba(30, 30, 30, 0.50);
-    font-family: Alata, serif;
-    font-size: 10px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: normal;
-    border-radius: 5px;
-    padding: 5px 26px 5px 9px;
-    background: rgba(64, 186, 33, 0.80);
-    display: flex;
-    flex-direction: row;
-    flex-group: 1;
-    justify-content: center;
-}
-
-.upload_photo_statement svg{
-    margin-right: 6px;
-    fill-opacity: 50%;
-}
