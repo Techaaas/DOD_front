@@ -1,6 +1,7 @@
 import React, {useState} from 'react';
 import FileUploader from '../file_uploader/FileUploader'; // Adjust the import path as necessary
 import './ButtonStatments.css';
+import { unstable_batchedUpdates } from "react-dom";
 
 type ButtonStatementsProps = {
   onFileSubmitStatement: () => void;
@@ -8,8 +9,8 @@ type ButtonStatementsProps = {
 
 const ButtonStatements: React.FC<ButtonStatementsProps> = ({onFileSubmitStatement}) => {
 
-  const [showUpload, setShowUpload] = useState(true);
-  const [showTakePhoto, setShowTakePhoto] = useState(true);
+  const [showUploadStatement, setShowUpload] = useState(true);
+  const [showTakePhotoStatement, setShowTakePhoto] = useState(true);
 
   const handleUploadClick = () => {
     setShowTakePhoto(false);
@@ -20,18 +21,24 @@ const ButtonStatements: React.FC<ButtonStatementsProps> = ({onFileSubmitStatemen
   };
 
   const handleFileRemoved = () => {
+    unstable_batchedUpdates(()=>{
     setShowUpload(true);
-    setShowTakePhoto(true);
+    setShowTakePhoto(true);})
+    setTimeout(() => {
+      console.log("showUpload:", showUploadStatement);
+      console.log("showTakePhoto:", showTakePhotoStatement);
+    }, 0);
   };
+
 
   return (
       <ul>
-        {showUpload && (
+        {showUploadStatement && (
             <li onClick={handleUploadClick}>
               <FileUploader onSubmit={onFileSubmitStatement} onFileRemove={handleFileRemoved} />
             </li>
         )}
-        {showTakePhoto && (
+        {showTakePhotoStatement && (
             <li>
               <button className='take_photo_passport' onClick={handleTakePhotoClick}>
                 <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 14 14" fill="none">

@@ -10,8 +10,8 @@ interface InfoGuestProps{
 
 const InfoGuest: FC<InfoGuestProps> = ({visible, surname, name}) => {
 
-  const [isStatementSelected, setIsStatementSelected] = useState(false);
-  const [isPassportSelected, setIsPassportSelected] = useState(false);
+  const [isStatementSelected, setIsStatementSelected] = useState(() => false);
+  const [isPassportSelected, setIsPassportSelected] = useState(() => false);
   if (!visible) return null;
 
   const handleStatementSelection = (selected: boolean) => {
@@ -33,7 +33,7 @@ const InfoGuest: FC<InfoGuestProps> = ({visible, surname, name}) => {
 
   return (
       <div className='info_guest' style={{ display: visible ? 'block' : 'none' }}>
-        <div className='info_guest-dialog' onClick={e => e.stopPropagation()}>
+        <div className='info_guest-dialog'>
           <div className='info_guest-header'>
             <div className='info_guest-title'>Participant form</div>
           </div>

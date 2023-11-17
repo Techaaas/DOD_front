@@ -8,8 +8,8 @@ type ButtonPassportProps = {
 
 const ButtonPassport: React.FC<ButtonPassportProps> = ({onFileSubmitPassport}) => {
 
-  const [showUpload, setShowUpload] = useState(true);
-  const [showTakePhoto, setShowTakePhoto] = useState(true);
+  const [showUploadPassport, setShowUpload] = useState(true);
+  const [showTakePhotoPassport, setShowTakePhoto] = useState(true);
 
   const handleUploadClick = () => {
     setShowTakePhoto(false);
@@ -22,16 +22,20 @@ const ButtonPassport: React.FC<ButtonPassportProps> = ({onFileSubmitPassport}) =
   const handleFileRemoved = () => {
     setShowUpload(true);
     setShowTakePhoto(true);
+    setTimeout(() => {
+      console.log("showUpload:", showUploadPassport);
+      console.log("showTakePhoto:", showTakePhotoPassport);
+    }, 0);
   };
 
   return (
       <ul>
-        {showUpload && (
+        {showUploadPassport && (
             <li onClick={handleUploadClick}>
               <FileUploader onSubmit={onFileSubmitPassport} onFileRemove={handleFileRemoved} />
             </li>
         )}
-        {showTakePhoto && (
+        {showTakePhotoPassport && (
             <li>
               <button className='take_photo_passport' onClick={handleTakePhotoClick}>
                 <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 14 14" fill="none">

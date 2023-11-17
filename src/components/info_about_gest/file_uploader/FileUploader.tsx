@@ -19,7 +19,7 @@ const FileUploader: React.FC<FileUploaderProps> = ({ onFileRemove}) => {
   const handleFileRemove = () => {
     setSelectedFile(null);
     onFileRemove()
-    console.log(onFileRemove)
+    console.log("File removed")
   };
 
 
