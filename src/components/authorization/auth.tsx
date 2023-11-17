@@ -1,5 +1,7 @@
 import React from 'react';
+
 import "./auth.css"
+import ButtonLink from "../Button/Button";
 
 function redirecton(){
 
@@ -7,9 +9,7 @@ function redirecton(){
 
 const Auth = () => {
     return (
-        <>
-        <button onClick={redirecton}> Log in by Innopolis University</button>
-        </>
+        <ButtonLink/>
     );
 };
 
