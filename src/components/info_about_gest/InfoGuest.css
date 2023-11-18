@@ -1,26 +1,26 @@
-body{
+body {
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.info_guest{
+.info_guest {
     position: relative;
     top: 42px;
     width: 302px;
     height: 565px;
     flex-shrink: 0;
-    border-radius: 5px;
+    border-radius: 20px;
     background: #FFF;
     box-shadow: 0 2px 10px 0 rgba(30, 30, 30, 0.50);
 }
 
-.info_guest-header{
+.info_guest-header {
     display: flex;
     justify-content: center;
 }
 
-.info_guest-title{
+.info_guest-title {
     position: absolute;
     color: #1E1E1E;
     font-family: Alata, serif;
@@ -31,43 +31,29 @@ body{
     top: 50px;
 }
 
-.info_guest-body{
+.info_guest-body {
     position: relative;
     top: 90px;
     left: 30px;
     display: flex;
     flex-direction: column;
 }
-.info_guest-body li{
+
+.info_guest-body li {
     margin-top: 15px;
 }
-.Yes_No li{
+
+.Yes_No li {
     display: inline-block;
     margin-top: 0;
     margin-right: 60px;
 }
-.Yes_No li input{
+
+.Yes_No li input {
     margin-right: 8px;
 }
 
-.info_guest-name-title{
-    color: #1E1E1E;
-    font-family: Alata, serif;
-    font-size: 20px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: normal;
-}
-.info_guest-name-content{
-    font-family: Alata, serif;
-    font-size: 18px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: normal;
-    color: #40BA21;
-}
-
-.info_guest-surname-title{
+.info_guest-name-title {
     color: #1E1E1E;
     font-family: Alata, serif;
     font-size: 20px;
@@ -76,7 +62,7 @@ body{
     line-height: normal;
 }
 
-.info_guest-surname-content{
+.info_guest-name-content {
     font-family: Alata, serif;
     font-size: 18px;
     font-style: normal;
@@ -85,15 +71,33 @@ body{
     color: #40BA21;
 }
 
-.info_guest-statement-title span{
+.info_guest-surname-title {
+    color: #1E1E1E;
+    font-family: Alata, serif;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.info_guest-surname-content {
+    font-family: Alata, serif;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    color: #40BA21;
+}
+
+.info_guest-statement-title span {
     color: #E54600;
 }
 
-.info_guest-passport-title span{
+.info_guest-passport-title span {
     color: #E54600;
 }
 
-.button_submit{
+.button_submit {
     position: relative;
     font-family: Alata, serif;
     font-size: 20px;
@@ -101,19 +105,21 @@ body{
     font-weight: 400;
     line-height: normal;
     width: 244px;
-    padding: 1px 89px 3px 89px ;
+    padding: 1px 89px 3px 89px;
     flex-shrink: 0;
-    border-radius: 5px;
+    border-radius: 30px;
     color: #ffffff;
     background: #40BA21;
-    top: 79px;
+    top: 95px;
 }
-.button_submit:active{
+
+.button_submit:active {
     color: #40BA21;
     background: #FFFFFF;
     border: 1px solid #40BA21;
 }
-.upload_take_photo li{
+
+.upload_take_photo li {
     display: inline-block;
 }
 
@@ -126,7 +132,8 @@ input[type="radio"][name="passport-choice"]:checked + label[for="radio-2-passpor
 input[type="radio"][name="passport-choice"]:checked + label[for="radio-2-passport"] ~ .button_submit {
     display: none;
 }
-.radio_button+label::before{
+
+.radio_button + label::before {
     background-color: #40BA21;
 }
 
