@@ -100,8 +100,8 @@ const InfoGuest: FC<InfoGuestProps> = ({visible}) => {
                         className='radio'
                         id='radio-1-statement'
                         name='statement-choice'
-                        checked={isStatementSelected}
-                        onChange={() => handleStatementSelection(true)}
+                        checked={!isStatementSelected}
+                        onChange={() => handleStatementSelection(false)}
                         disabled={isStatementFileSelected}
                     />
                     <label htmlFor='radio-1-statement'>Yes</label>
@@ -112,8 +112,8 @@ const InfoGuest: FC<InfoGuestProps> = ({visible}) => {
                         className='radio'
                         id='radio-2-statement'
                         name='statement-choice'
-                        checked={!isStatementSelected}
-                        onChange={() => handleStatementSelection(false)}
+                        checked={isStatementSelected}
+                        onChange={() => handleStatementSelection(true)}
                         disabled={isStatementFileSelected}
                     />
                     <label htmlFor='radio-2-statement'>No</label>
@@ -136,8 +136,8 @@ const InfoGuest: FC<InfoGuestProps> = ({visible}) => {
                         className='radio_button'
                         id='radio-1-passport'
                         name='passport-choice'
-                        checked={isPassportSelected}
-                        onChange={() => handlePassportSelection(true)}
+                        checked={!isPassportSelected}
+                        onChange={() => handlePassportSelection(false)}
                         disabled={isPassportFileSelected}
                     />
                     <label htmlFor='radio-1-passport'>Yes</label>
@@ -148,8 +148,8 @@ const InfoGuest: FC<InfoGuestProps> = ({visible}) => {
                         className='radio_button'
                         id='radio-2-passport'
                         name='passport-choice'
-                        checked={!isPassportSelected}
-                        onChange={() => handlePassportSelection(false)}
+                        checked={isPassportSelected}
+                        onChange={() => handlePassportSelection(true)}
                         disabled={isPassportFileSelected}
                     />
                     <label htmlFor='radio-2-passport'>No</label>
