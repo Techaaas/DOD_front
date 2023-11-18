@@ -58,16 +58,16 @@ p {
 .input-file {
     color: #FFF;
     font-family: Alata, serif;
-    font-size: 10px;
+    font-size: 13px;
     font-style: normal;
     font-weight: 400;
     line-height: normal;
-    padding: 4px 20px 5px 15px;
+    padding: 4px 17px 5px 12px;
     flex-shrink: 0;
     background: #40BA21;
     border-radius: 50px;
     position: relative;
-    top: 1px;
+    top: 2px;
     display: flex;
     flex-direction: row;
     flex-group: 1;
