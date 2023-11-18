@@ -4,6 +4,8 @@ input[type="file"] {
 
 .file_name {
     margin-top: -13px;
+    display: flex;
+    align-items: center;
 }
 
 .icon_name {
@@ -11,6 +13,7 @@ input[type="file"] {
     flex-direction: row;
     flex-group: 1;
     justify-content: center;
+    white-space: nowrap;
 }
 
 .icon_name svg {
@@ -29,10 +32,12 @@ input[type="file"] {
     padding: 1px 8px 2px 13px;
     border-radius: 7px;
     background: rgba(217, 217, 217, 0.30);
+    white-space: nowrap;
+    overflow: hidden;
 }
 
-.file_name section button {
-    margin-left: 107px;
+.file_buttons {
+    margin-left: 15px; /* Размещаем кнопку "Удалить" справа */
 }
 
 p svg {
@@ -57,14 +62,6 @@ p {
     font-style: normal;
     font-weight: 400;
     line-height: normal;
-}
-
-.input-file svg {
-    margin-right: 5px;
-    margin-top: 1px;
-}
-
-.input-file {
     padding: 4px 20px 5px 15px;
     flex-shrink: 0;
     background: #40BA21;
@@ -76,3 +73,9 @@ p {
     flex-group: 1;
     justify-content: center;
 }
+
+.input-file svg {
+    margin-right: 5px;
+    margin-top: 1px;
+}
+

@@ -41,10 +41,10 @@ const FileUploader: React.FC<FileUploaderProps> = ({onFileRemove, onFileSelected
                           d="M2.91667 12.25C2.59583 12.25 2.32108 12.1357 2.09242 11.907C1.86375 11.6783 1.74961 11.4038 1.75 11.0833V2.91667C1.75 2.59583 1.86433 2.32108 2.093 2.09242C2.32167 1.86375 2.59622 1.74961 2.91667 1.75H11.0833C11.4042 1.75 11.6789 1.86433 11.9076 2.093C12.1363 2.32167 12.2504 2.59622 12.25 2.91667V11.0833C12.25 11.4042 12.1357 11.6789 11.907 11.9076C11.6783 12.1363 11.4038 12.2504 11.0833 12.25H2.91667ZM2.91667 11.0833H11.0833V2.91667H2.91667V11.0833ZM3.5 9.91667H10.5L8.3125 7L6.5625 9.33333L5.25 7.58333L3.5 9.91667Z"
                           fill="#8E8E8E"/>
                     </svg>
-                    {selectedFile.name}
+                    {selectedFile.name.length > 20 ? `${selectedFile.name.slice(0, 20)}...` : selectedFile.name}
                   </p>
                 </section>
-                <section>
+                <section className="file_buttons">
                   <button onClick={handleFileRemove}>
                     <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 15 15" fill="none">
                       <path
