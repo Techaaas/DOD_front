@@ -6,7 +6,7 @@ function QrScan() {
     const [isEnabled, setEnabled] = useState(true);
     const [qrMessage, setMessage] = useState("");
     useEffect(() => {
-        const config = {fps: 10, qrbox: {width: 200, height: 200}}
+        const config = {fps: 10, qrbox: 200}
         const scanQr = new Html5Qrcode("qrCodeContainer");
 
         const qrScannerStop = () => {
