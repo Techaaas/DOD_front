@@ -1,5 +1,5 @@
 .qrScanner {
-    position: fixed;
+    position: absolute;
 
     top: 209px;
     left: 29px;
@@ -18,7 +18,7 @@
 .textScan {
     position: absolute;
     color: #000;
-    left: 158px;
+    left: 50%;
     top: 103px;
     font-family: Alata, serif;
     font-size: 27px;
