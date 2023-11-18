@@ -1,0 +1,397 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="856ef07d-255f-46dc-a02c-54993a8e2c92" name="Changes" comment="HotFix 1.5 change size buttons and titles">
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/App.test.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/App.test.tsx" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ChangesViewManager">
+    <option name="groupingKeys">
+      <option value="directory" />
+    </option>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="TypeScript File" />
+        <option value="TypeScript JSX File" />
+        <option value="package.json" />
+        <option value="CSS File" />
+      </list>
+    </option>
+  </component>
+  <component name="FormatOnSaveOptions">
+    <option name="myRunOnSave" value="true" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="andrey_pages" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RESET_MODE" value="MIXED" />
+  </component>
+  <component name="GitToolBoxStore">
+    <option name="projectConfigVersion" value="5" />
+    <option name="recentBranches">
+      <RecentBranches>
+        <option name="branchesForRepo">
+          <list>
+            <RecentBranchesForRepo>
+              <option name="branches">
+                <list>
+                  <RecentBranch>
+                    <option name="branchName" value="darya_pages" />
+                    <option name="lastUsedInstant" value="1700346314" />
+                  </RecentBranch>
+                  <RecentBranch>
+                    <option name="branchName" value="andrey_pages" />
+                    <option name="lastUsedInstant" value="1700346287" />
+                  </RecentBranch>
+                  <RecentBranch>
+                    <option name="branchName" value="main" />
+                    <option name="lastUsedInstant" value="1700346275" />
+                  </RecentBranch>
+                </list>
+              </option>
+              <option name="repositoryRootUrl" value="file://$PROJECT_DIR$" />
+            </RecentBranchesForRepo>
+          </list>
+        </option>
+      </RecentBranches>
+    </option>
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 5
+}</component>
+  <component name="ProjectId" id="2YAIfP7oyFReXKgQ0xs3zK4tJ3g" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "git-widget-placeholder": "darya__pages",
+    "list.type.of.created.stylesheet": "CSS",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "actions.on.save",
+    "ts.external.directory.path": "/Users/dehopen/WebstormProjects/DOD_front/node_modules/typescript/lib",
+    "vue.rearranger.settings.migration": "true"
+  },
+  "keyToStringList": {
+    "ChangesTree.GroupingKeys": [
+      "directory"
+    ]
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/components/info_about_gest/file_uploader_sender" />
+      <recent name="$PROJECT_DIR$/src/app" />
+      <recent name="$PROJECT_DIR$" />
+      <recent name="$PROJECT_DIR$/src/App" />
+      <recent name="$PROJECT_DIR$/src/components/Authorization" />
+    </key>
+  </component>
+  <component name="RunManager" selected="npm.predeploy">
+    <configuration name="deploy" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="deploy" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <configuration name="eject" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="eject" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <configuration name="predeploy" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="predeploy" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="npm.predeploy" />
+        <item itemvalue="npm.eject" />
+        <item itemvalue="npm.deploy" />
+        <item itemvalue="npm.predeploy" />
+        <item itemvalue="npm.deploy" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="856ef07d-255f-46dc-a02c-54993a8e2c92" name="Changes" comment="" />
+      <created>1699962059924</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1699962059924</updated>
+      <workItem from="1699962061071" duration="99212000" />
+      <workItem from="1700346406808" duration="647000" />
+    </task>
+    <task id="LOCAL-00001" summary="Base">
+      <option name="closed" value="true" />
+      <created>1699963332809</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1699963332809</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Base">
+      <option name="closed" value="true" />
+      <created>1699963635396</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1699963635396</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Revert &quot;Base&quot;&#10;&#10;This reverts commit ec76851e">
+      <option name="closed" value="true" />
+      <created>1699963747441</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1699963747441</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Base">
+      <option name="closed" value="true" />
+      <created>1699964674958</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1699964674958</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Base">
+      <option name="closed" value="true" />
+      <created>1699964701143</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1699964701143</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Base">
+      <option name="closed" value="true" />
+      <created>1699964793643</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1699964793643</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Base">
+      <option name="closed" value="true" />
+      <created>1700068390878</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1700068390878</updated>
+    </task>
+    <task id="LOCAL-00008" summary="Create page Info_Guest">
+      <option name="closed" value="true" />
+      <created>1700069321119</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1700069321119</updated>
+    </task>
+    <task id="LOCAL-00009" summary="Delete code in App.css">
+      <option name="closed" value="true" />
+      <created>1700069633873</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1700069633873</updated>
+    </task>
+    <task id="LOCAL-00010" summary="Add uploader">
+      <option name="closed" value="true" />
+      <created>1700164496537</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1700164496537</updated>
+    </task>
+    <task id="LOCAL-00011" summary="Add Button Passport, Button Statements and Take Photo">
+      <option name="closed" value="true" />
+      <created>1700174298111</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1700174298111</updated>
+    </task>
+    <task id="LOCAL-00012" summary="Update 1.1">
+      <option name="closed" value="true" />
+      <created>1700251261871</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1700251261871</updated>
+    </task>
+    <task id="LOCAL-00013" summary="Update 1.2 Implementation visible buttons on different state">
+      <option name="closed" value="true" />
+      <created>1700265972143</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1700265972143</updated>
+    </task>
+    <task id="LOCAL-00014" summary="Update 1.3 Edit bugs, finish css on buttons">
+      <option name="closed" value="true" />
+      <created>1700276597511</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1700276597511</updated>
+    </task>
+    <task id="LOCAL-00015" summary="Update 1.4 Edit bugs, add css radio buttons, edit and save name and surname">
+      <option name="closed" value="true" />
+      <created>1700280552317</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1700280552317</updated>
+    </task>
+    <task id="LOCAL-00016" summary="HotFix 1.1">
+      <option name="closed" value="true" />
+      <created>1700312038129</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1700312038129</updated>
+    </task>
+    <task id="LOCAL-00017" summary="HotFix 1.1">
+      <option name="closed" value="true" />
+      <created>1700333727952</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1700333727952</updated>
+    </task>
+    <task id="LOCAL-00018" summary="HotFix 1.3">
+      <option name="closed" value="true" />
+      <created>1700335927675</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1700335927676</updated>
+    </task>
+    <task id="LOCAL-00019" summary="HotFix 1.4">
+      <option name="closed" value="true" />
+      <created>1700338011433</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1700338011433</updated>
+    </task>
+    <task id="LOCAL-00020" summary="HotFix 1.5 change size buttons and titles">
+      <option name="closed" value="true" />
+      <created>1700338898771</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1700338898771</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="RECENT_FILTERS">
+      <map>
+        <entry key="Branch">
+          <value>
+            <list>
+              <RecentGroup>
+                <option name="FILTER_VALUES">
+                  <option value="origin/darya_pages" />
+                </option>
+              </RecentGroup>
+            </list>
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="origin/darya_pages" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <MESSAGE value="Revert &quot;Base&quot;&#10;&#10;This reverts commit ec76851e" />
+    <MESSAGE value="Base" />
+    <MESSAGE value="Create page Info_Guest" />
+    <MESSAGE value="Delete code in App.css" />
+    <MESSAGE value="Add uploader" />
+    <MESSAGE value="Add Button Passport, Button Statements and Take Photo" />
+    <MESSAGE value="Update 1.1" />
+    <MESSAGE value="Update 1.2 Implementation visible buttons on different state" />
+    <MESSAGE value="Update 1.3 Edit bugs, finish css on buttons" />
+    <MESSAGE value="Update 1.4 Edit bugs, add css radio buttons, edit and save name and surname" />
+    <MESSAGE value="HotFix 1.2" />
+    <MESSAGE value="HotFix 1.3" />
+    <MESSAGE value="HotFix 1.4" />
+    <MESSAGE value="HotFix 1.5 change size buttons and titles" />
+    <option name="LAST_COMMIT_MESSAGE" value="HotFix 1.5 change size buttons and titles" />
+  </component>
+</project>
