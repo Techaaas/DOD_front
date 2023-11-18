@@ -39,17 +39,17 @@ body {
     flex-direction: column;
 }
 
-.info_guest-body li {
+.info_guest-body section {
     margin-top: 15px;
 }
 
-.Yes_No li {
+.Yes_No div {
     display: inline-block;
     margin-top: 0;
-    margin-right: 60px;
+    margin-right: 12px;
 }
 
-.Yes_No li input {
+.Yes_No div input {
     margin-right: 8px;
 }
 
@@ -97,8 +97,13 @@ body {
     color: #E54600;
 }
 
-.button_submit {
+.info_guest-passport {
     position: relative;
+    top: 15px;
+}
+
+.button_submit {
+    position: absolute;
     font-family: Alata, serif;
     font-size: 20px;
     font-style: normal;
@@ -110,7 +115,7 @@ body {
     border-radius: 30px;
     color: #ffffff;
     background: #40BA21;
-    top: 95px;
+    top: 416px;
 }
 
 .button_submit:active {
@@ -119,9 +124,6 @@ body {
     border: 1px solid #40BA21;
 }
 
-.upload_take_photo li {
-    display: inline-block;
-}
 
 input[type="radio"][name="statement-choice"]:checked + label[for="radio-2-statement"] ~ .upload_take_photo,
 input[type="radio"][name="statement-choice"]:checked + label[for="radio-2-statement"] ~ .button_submit {
@@ -135,6 +137,19 @@ input[type="radio"][name="passport-choice"]:checked + label[for="radio-2-passpor
 
 .radio_button + label::before {
     background-color: #40BA21;
+}
+
+.slide-in-out {
+    opacity: 0;
+    transform: translateY(-100%);
+    transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+    pointer-events: none;
+}
+
+.slide-in-out.show {
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
 }
 
 

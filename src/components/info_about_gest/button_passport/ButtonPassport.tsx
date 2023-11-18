@@ -4,9 +4,10 @@ import './ButtonPassport.css';
 
 type ButtonPassportProps = {
   onFileSubmitPassport: () => void;
+  onFileSelectionPassport: (select: boolean) => void
 };
 
-const ButtonPassport: React.FC<ButtonPassportProps> = ({onFileSubmitPassport}) => {
+const ButtonPassport: React.FC<ButtonPassportProps> = ({onFileSubmitPassport, onFileSelectionPassport}) => {
 
   const [showUploadPassport, setShowUpload] = useState(true);
   const [showTakePhotoPassport, setShowTakePhoto] = useState(true);
@@ -31,15 +32,15 @@ const ButtonPassport: React.FC<ButtonPassportProps> = ({onFileSubmitPassport}) =
 
 
   return (
-      <div>
+      <div className='buttons_passport'>
         {showUploadPassport && (
             <div>
               <FileUploader onSubmit={onFileSubmitPassport} onFileRemove={handleFileRemoved}
-                            onFileSelected={handleFileSelected}/>
+                            onFileSelected={handleFileSelected} onSelected={onFileSelectionPassport}/>
             </div>
         )}
         {showTakePhotoPassport && (
-            <div onClick={handleTakePhotoClick}>
+            <div onClick={handleTakePhotoClick} className='container'>
               <button className='take_photo_passport'>
                 <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 14 14" fill="none">
                   <path

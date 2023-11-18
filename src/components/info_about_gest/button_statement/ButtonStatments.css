@@ -1,14 +1,14 @@
 
 .take_photo_statement {
-    color: rgba(30, 30, 30, 0.50);
+    color: #FFFFFF;
     font-family: Alata, serif;
     font-size: 10px;
     font-style: normal;
     font-weight: 400;
     line-height: normal;
-    border-radius: 5px;
-    padding: 5px 26px 5px 9px;
-    background: rgba(64, 186, 33, 0.80);
+    border-radius: 50px;
+    padding: 4px 20px 5px 15px;
+    background: #40BA21;
     display: flex;
     flex-direction: row;
     flex-group: 1;
@@ -17,16 +17,19 @@
 
 .take_photo_statement svg {
     margin-right: 6px;
-    fill-opacity: 50%;
+    width: 12px;
+    height: 12px;
+    flex-shrink: 0;
+    margin-top: 1px;
 }
 
 .buttons_statement div {
     display: inline-block;
     position: relative;
-    margin-right: 5px;
+    margin-right: 10px;
 }
 
 .buttons_statement {
     position: relative;
-    top: 9px;
+    top: 5px;
 }

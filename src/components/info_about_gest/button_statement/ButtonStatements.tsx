@@ -4,13 +4,14 @@ import './ButtonStatments.css';
 
 type ButtonStatementsProps = {
   onFileSubmitStatement: () => void;
+  onFileSelectionStatement: (select: boolean) => void
 };
 
-const ButtonStatements: React.FC<ButtonStatementsProps> = ({onFileSubmitStatement}) => {
+const ButtonStatements: React.FC<ButtonStatementsProps> = ({onFileSubmitStatement, onFileSelectionStatement}) => {
 
   const [showUploadStatement, setShowUpload] = useState(true);
   const [showTakePhotoStatement, setShowTakePhoto] = useState(true);
-  
+
 
   const handleTakePhotoClick = () => {
     setShowUpload(false);
@@ -36,7 +37,8 @@ const ButtonStatements: React.FC<ButtonStatementsProps> = ({onFileSubmitStatemen
             <div>
               <FileUploader onSubmit={onFileSubmitStatement}
                             onFileRemove={handleFileRemoved}
-                            onFileSelected={handleFileSelected}/>
+                            onFileSelected={handleFileSelected}
+                            onSelected={onFileSelectionStatement}/>
             </div>
         )}
         {showTakePhotoStatement && (
