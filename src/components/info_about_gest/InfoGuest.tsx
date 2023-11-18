@@ -2,6 +2,8 @@ import React, {FC, useState} from 'react';
 import './InfoGuest.css'
 import ButtonStatements from "./button_statement/ButtonStatements";
 import ButtonPassport from "./button_passport/ButtonPassport";
+import axios from 'axios';
+import data from '../data/info_guest.json'
 
 interface InfoGuestProps {
   visible: boolean
@@ -9,7 +11,7 @@ interface InfoGuestProps {
   surname: string
 }
 
-const InfoGuest: FC<InfoGuestProps> = ({visible, surname, name}) => {
+const InfoGuest: FC<InfoGuestProps> = ({visible}) => {
 
   const [isStatementSelected, setIsStatementSelected] = useState(() => false);
   const [isPassportSelected, setIsPassportSelected] = useState(() => false);
@@ -17,9 +19,33 @@ const InfoGuest: FC<InfoGuestProps> = ({visible, surname, name}) => {
   const [isButtonPassportVisible, setIsButtonPassportVisible] = useState(false);
   const [isStatementFileSelected, setIsStatementFileSelected] = useState(false);
   const [isPassportFileSelected, setIsPassportFileSelected] = useState(false);
+  const [editableName, setEditableName] = useState(data.name);
+  const [editableSurname, setEditableSurname] = useState(data.surname);
+  const [tempName, setTempName] = useState(editableName);
+  const [tempSurname, setTempSurname] = useState(editableSurname);
 
 
   if (!visible) return null;
+
+  const handleConfirmChanges = () => {
+    console.log('File submitted');
+    setEditableName(tempName);
+    setEditableSurname(tempSurname);
+    console.log(tempName)
+    const updatedData = {
+      name: tempName,
+      surname: tempSurname
+    };
+    axios.post('https://your-server.com/update', updatedData)
+        .then(response => {
+          // Обработка успешного ответа
+          console.log('Data updated successfully', response);
+        })
+        .catch(error => {
+          // Обработка ошибки
+          console.error('Error updating data', error);
+        });
+  };
 
   const handleStatementSelection = (selected: boolean) => {
     setIsStatementSelected(selected);
@@ -39,11 +65,6 @@ const InfoGuest: FC<InfoGuestProps> = ({visible, surname, name}) => {
   };
 
 
-  const handleSubmit = () => {
-    console.log('File submitted');
-  };
-
-
   return (
       <div className='info_guest' style={{display: visible ? 'block' : 'none'}}>
         <div className='info_guest-dialog'>
@@ -54,11 +75,19 @@ const InfoGuest: FC<InfoGuestProps> = ({visible, surname, name}) => {
           <div className='info_guest-body'>
             <section className='info_guest-name'>
               <div className='info_guest-name-title'>Participant name</div>
-              <div className='info_guest-name-content'>{name}</div>
+              <input className='info_guest-name-content'
+                     type="text"
+                     value={tempName}
+                     onChange={(e) => setTempName(e.target.value)}
+              />
             </section>
             <section className='info_guest-surname'>
               <div className='info_guest-surname-title'>Participant surname</div>
-              <div className='info_guest-surname-content'>{surname}</div>
+              <input className='info_guest-surname-content'
+                     type="text"
+                     value={tempSurname}
+                     onChange={(e) => setTempSurname(e.target.value)}
+              />
             </section>
             <section className='info_guest-statement'>
               <div className='info_guest-statement-title'>Copy of statement <span>*</span></div>
@@ -92,7 +121,7 @@ const InfoGuest: FC<InfoGuestProps> = ({visible, surname, name}) => {
                 </div>
                 {/*Создание фото или загрузка его на сайт*/}
                 <div className={`upload_take_photo slide-in-out ${isButtonStatementVisible ? 'show' : ''}`}>
-                  <ButtonStatements onFileSubmitStatement={handleSubmit}
+                  <ButtonStatements onFileSubmitStatement={handleConfirmChanges}
                                     onFileSelectionStatement={handleStatementFileSelect}/>
                 </div>
               </div>
@@ -127,13 +156,13 @@ const InfoGuest: FC<InfoGuestProps> = ({visible, surname, name}) => {
                   </div>
                 </div>
                 <div className={`upload_take_photo slide-in-out ${isButtonPassportVisible ? 'show' : ''}`}>
-                  <ButtonPassport onFileSubmitPassport={handleSubmit}
+                  <ButtonPassport onFileSubmitPassport={handleConfirmChanges}
                                   onFileSelectionPassport={handlePassportFileSelect}/>
                 </div>
               </div>
             </section>
             {/*Кнопка подтверждения*/}
-            <button className='button_submit' onClick={handleSubmit}>Submit</button>
+            <button className='button_submit' onClick={handleConfirmChanges}>Submit</button>
           </div>
         </div>
       </div>
