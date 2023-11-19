@@ -5,7 +5,6 @@ type FileUploaderProps = {
   onSubmit: () => void;
   onSelected: (select: boolean) => void;
   onFileRemove: () => void
-  onFileSubmit?: () => void;
   onFileSelected: () => void;
 };
 

@@ -12,7 +12,6 @@ const ButtonStatements: React.FC<ButtonStatementsProps> = ({onFileSubmitStatemen
   const [showUploadStatement, setShowUpload] = useState(true);
   const [showTakePhotoStatement, setShowTakePhoto] = useState(true);
 
-
   const handleTakePhotoClick = () => {
     setShowUpload(false);
   };
