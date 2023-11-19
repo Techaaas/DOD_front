@@ -1,15 +1,15 @@
 import React from 'react';
 import './App.css';
-import Auth from "../components/authorization/auth";
-import Header from "../components/header/header";
-import QrScan from "../components/QrScan/QrScan";
+// import Auth from "../components/authorization/auth";
+import Header from "../components/authorization/header/header";
+import QrScan from "../components/authorization/QrScan/QrScan";
 
 function App() {
   return (
       <div>
-          <Header/>
-          {/*<Auth/>*/}
-          <QrScan></QrScan>
+        <Header/>
+        {/*<Auth/>*/}
+        <QrScan></QrScan>
       </div>
   );
 }

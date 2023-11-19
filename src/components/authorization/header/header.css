@@ -7,7 +7,7 @@
 }
 
 .logoText {
-    position: relative;
+    position: absolute;
     color: #ECECEC;
     font-family: Audiowide, serif;
     font-size: 35px;

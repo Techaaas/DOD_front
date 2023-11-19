@@ -1,16 +1,16 @@
 import React from 'react';
 
 import "./auth.css"
-import ButtonLink from "../Button/Button";
+import ButtonLink from "./Button/Button";
 
-function redirecton(){
-
-}
+// function redirecton() {
+//
+// }
 
 const Auth = () => {
-    return (
-        <ButtonLink/>
-    );
+  return (
+      <ButtonLink/>
+  );
 };
 
 export default Auth;
