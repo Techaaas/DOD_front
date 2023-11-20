@@ -1,9 +1,18 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.qrScanner_page {
+    margin-top: 29px;
+}
+
 .qrScanner {
-    position: fixed;
-
-    top: 150px;
-    left: 29px;
-
+    position: absolute;
+    top: 140px;
+    left: 30px;
     width: 302px;
     height: 530px;
     border-radius: 5px;
@@ -17,8 +26,8 @@
 .textScan {
     position: absolute;
     color: #000;
-    left: 110px;
-    top: 90px;
+    top: 80px;
+    left: 100px;
     font-family: Alata, serif;
     font-size: 27px;
 }
