@@ -70,3 +70,7 @@ video {
     color: black;
     font-size: 20px;
 }
+
+.blur-background {
+    filter: blur(5px); /* Измените значение для нужной степени размытия */
+}

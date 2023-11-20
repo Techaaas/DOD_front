@@ -4,16 +4,15 @@ import ButtonStatements from "../../components/info_about_gest/button_statement/
 import ButtonPassport from "../../components/info_about_gest/button_passport/ButtonPassport";
 import axios from 'axios';
 import data from '../../data/info_guest.json'
-import {BrowserRouter, Route, Routes} from "react-router-dom";
-import TakePhoto from "../../components/info_about_gest/take_photo/TakePhoto";
 
 interface InfoGuestProps {
   visible: boolean
   name: string
   surname: string
+  onClose: () => void;
 }
 
-const InfoGuest: FC<InfoGuestProps> = ({visible}) => {
+const InfoGuest: FC<InfoGuestProps> = ({visible, onClose}) => {
 
   const [isStatementSelected, setIsStatementSelected] = useState(() => false);
   const [isPassportSelected, setIsPassportSelected] = useState(() => false);
@@ -73,6 +72,7 @@ const InfoGuest: FC<InfoGuestProps> = ({visible}) => {
           <div className='info_guest-dialog'>
             <div className='info_guest-header'>
               <div className='info_guest-title'>Participant form</div>
+              <button onClick={onClose} className="close-button">X</button>
             </div>
             {/*Весь контент в сплывающем окне*/}
             <div className='info_guest-body'>
@@ -169,11 +169,6 @@ const InfoGuest: FC<InfoGuestProps> = ({visible}) => {
             </div>
           </div>
         </div>
-        <BrowserRouter>
-          <Routes>
-            <Route path="/take_photo" element={<TakePhoto onFileSelectionTakePhoto={handleStatementFileSelect} onFileSubmitTakePhoto={handleConfirmChanges}></TakePhoto>}/>
-          </Routes>
-        </BrowserRouter>
       </div>
   );
 };

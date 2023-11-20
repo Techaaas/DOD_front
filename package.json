@@ -13,6 +13,7 @@
     "@types/react-dom": "^18.2.15",
     "@types/react-router-dom": "^5.3.3",
     "axios": "^1.6.2",
+    "html5-qrcode": "^2.3.8",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-dropzone": "^14.2.3",

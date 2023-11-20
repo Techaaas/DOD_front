@@ -1,16 +1,23 @@
 import React, {useState, useEffect} from 'react';
 import './QrScan.css';
 import {Html5Qrcode} from "html5-qrcode";
+import InfoGuest from "../InfoGuest/InfoGuest";
 
 function QrScan() {
   const [isEnabled, setEnabled] = useState(true);
-  const [qrMessage, setMessage] = useState("");
+  // const [qrMessage, setMessage] = useState("");
+  const [showInfoGuest, setShowInfoGuest] = useState(false);
+  const toggleInfoGuest = () => {
+    setShowInfoGuest(!showInfoGuest);
+    setEnabled(true);
+  };
   useEffect(() => {
     const config = {fps: 10, qrbox: {width: 200, height: 200}}
     const scanQr = new Html5Qrcode("qrCodeContainer");
 
     const qrScannerStop = () => {
       if (scanQr && scanQr.isScanning) {
+
         scanQr.stop()
             .then(() => console.log("Qr code scanned"))
             .catch(() => console.log("Error: Qr code not scanned"))
@@ -19,6 +26,7 @@ function QrScan() {
 
     const qrSuccess = (decodedText: string) => {
       setMessage(decodedText);
+      setShowInfoGuest(true); // Показываем InfoGuest
       setEnabled(false);
     }
 
@@ -35,13 +43,18 @@ function QrScan() {
 
   return (
       <>
-        <div className="textScan"> Scan the QR</div>
-        <div className="qrScanner">
+        <div className={`textScan ${showInfoGuest ? 'blur-background' : ''}`}>Scan the QR</div>
+        <div className={`qrScanner ${showInfoGuest ? 'blur-background' : ''}`}>
           <div id="qrCodeContainer"></div>
-          {qrMessage && <div className="qr-message">{qrMessage}</div>}
         </div>
+        {showInfoGuest && (
+            <div className="info-guest-container">
+              <InfoGuest onClose={toggleInfoGuest} visible={true} name={'Andrey'} surname={'Gerasimov'}/>
+            </div>
+        )}
       </>
   );
+
 }
 
 export default QrScan;
