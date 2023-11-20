@@ -1,0 +1,16 @@
+.header {
+    position: absolute;
+    width: 360px;
+    height: 58px;
+    background: #40BA21;
+    box-shadow: 0 2px 10px 0 rgba(30, 30, 30, 0.25);
+}
+
+.logoText {
+    position: absolute;
+    color: #ECECEC;
+    font-family: Audiowide, serif;
+    font-size: 35px;
+    left: 26px;
+    top: 4px;
+}
