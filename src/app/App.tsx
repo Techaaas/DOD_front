@@ -1,15 +1,21 @@
 import React from 'react';
 import './App.css';
-// import Auth from "../components/authorization/auth";
-import Header from "../components/authorization/header/header";
-import QrScan from "../pages/QrScan/QrScan";
+import InfoGuest from "../pages/InfoGuest/InfoGuest";
+import {Route, Routes} from "react-router-dom";
+import TakePhoto from "../components/info_about_gest/take_photo/TakePhoto";
+// import TakePhoto from "../components/info_about_gest/take_photo/TakePhoto";
+
 
 function App() {
   return (
-      <div>
-        <Header/>
-        {/*<Auth/>*/}
-        <QrScan></QrScan>
+      <div className="App">
+          <Routes>
+            <Route element = {<InfoGuest visible={true} name={'Andrey'} surname={'Gerasimov'}></InfoGuest>}>
+              <Route path="/take_photo" element={<TakePhoto></TakePhoto>}/>
+            </Route>
+          </Routes>
+
+        {/*<TakePhoto></TakePhoto>*/}
       </div>
   );
 }
