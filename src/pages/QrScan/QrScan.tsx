@@ -13,7 +13,7 @@ function QrScan() {
         setEnabled(true);
     };
     useEffect(() => {
-        const config = {fps: 20, qrbox: {width: 250, height: 250}}
+        const config = {fps: 20, qrbox: {width: 200, height: 200}}
         const scanQr = new Html5Qrcode("qrCodeContainer");
 
         const qrScannerStop = () => {
