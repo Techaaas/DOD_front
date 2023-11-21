@@ -17,18 +17,18 @@ export const allRoutes = [
   },
   {
     component: () => <TakePhoto/>,
-    path: 'take_photo',
+    path: 'photo',
   },
   {
     component: () => <Authorization/>,
-    path: 'authorization'
+    path: 'auth'
   }
 
 ] as const;
 
 function App() {
   return (
-      <BrowserRouter basename="/DOD_front">
+      <BrowserRouter basename="/">
 
         <Routes>
           {allRoutes.map((route) => {

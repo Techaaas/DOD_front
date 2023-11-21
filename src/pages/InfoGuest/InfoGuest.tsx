@@ -28,6 +28,7 @@ const InfoGuest: FC<InfoGuestProps> = ({onClose}) => {
     setEditableName(tempName);
     setEditableSurname(tempSurname);
     console.log(tempName)
+    console.log(tempSurname)
     const updatedData = {
       name: tempName,
       surname: tempSurname
