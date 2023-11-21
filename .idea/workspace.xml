@@ -4,8 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="856ef07d-255f-46dc-a02c-54993a8e2c92" name="Changes" comment="Resized video borders">
+    <list default="true" id="856ef07d-255f-46dc-a02c-54993a8e2c92" name="Changes" comment="Resized video borders v.2.0">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/QrScan/QrScan.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/QrScan/QrScan.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -182,7 +183,7 @@
       <workItem from="1699962061071" duration="99212000" />
       <workItem from="1700346406808" duration="647000" />
       <workItem from="1700589585898" duration="2690000" />
-      <workItem from="1700595379388" duration="8293000" />
+      <workItem from="1700595379388" duration="8589000" />
     </task>
     <task id="LOCAL-00001" summary="Base">
       <option name="closed" value="true" />
@@ -488,7 +489,15 @@
       <option name="project" value="LOCAL" />
       <updated>1700603728251</updated>
     </task>
-    <option name="localTasksCounter" value="39" />
+    <task id="LOCAL-00039" summary="Resized video borders v.2.0">
+      <option name="closed" value="true" />
+      <created>1700603802674</created>
+      <option name="number" value="00039" />
+      <option name="presentableId" value="LOCAL-00039" />
+      <option name="project" value="LOCAL" />
+      <updated>1700603802674</updated>
+    </task>
+    <option name="localTasksCounter" value="40" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -534,7 +543,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Update 1.3 Edit bugs, finish css on buttons" />
     <MESSAGE value="Update 1.4 Edit bugs, add css radio buttons, edit and save name and surname" />
     <MESSAGE value="HotFix 1.2" />
     <MESSAGE value="HotFix 1.3" />
@@ -559,6 +567,7 @@
     <MESSAGE value="Form of the partipiciants centered, added prioritized z-index, changed the size of the video" />
     <MESSAGE value="Resized video, test" />
     <MESSAGE value="Resized video borders" />
-    <option name="LAST_COMMIT_MESSAGE" value="Resized video borders" />
+    <MESSAGE value="Resized video borders v.2.0" />
+    <option name="LAST_COMMIT_MESSAGE" value="Resized video borders v.2.0" />
   </component>
 </project>

@@ -19,10 +19,10 @@
     /*width: calc(50%);*/
     /*height: calc(50%);*/
 
-    width: calc(90vw - 10px);
-    height: calc(90vw - 10px);
-    top: calc(50% - (80vw - 10px) / 2);
-    left: calc(50% - (80vw - 10px) / 2);
+    width: calc(85vw - 10px);
+    height: calc(85vw - 10px);
+    top: calc(50% - (85vw - 10px) / 2);
+    left: calc(50% - (85vw - 10px) / 2);
     border-radius: 5px;
     overflow: hidden;
     display: flex;
