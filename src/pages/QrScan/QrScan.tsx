@@ -2,7 +2,7 @@ import React, {useState, useEffect} from 'react';
 import './QrScan.css';
 import {Html5Qrcode} from "html5-qrcode";
 import InfoGuest from "../InfoGuest/InfoGuest";
-import Header from "../../components/authorization/Header/Header";
+import {Outlet} from 'react-router-dom';
 
 function QrScan() {
   const [isEnabled, setEnabled] = useState(true);
@@ -26,6 +26,7 @@ function QrScan() {
     }
 
     const qrSuccess = () => {
+      // setMessage(decodedText);
       setShowInfoGuest(true); // Показываем InfoGuest
       setEnabled(false);
     }
@@ -42,20 +43,18 @@ function QrScan() {
   }, [isEnabled]);
 
   return (
-      <div className='qrScanner_page'>
-        <div className={`header-container ${showInfoGuest ? 'blur-background' : ''}`}>
-          <Header/>
-        </div>
+      <>
         <div className={`textScan ${showInfoGuest ? 'blur-background' : ''}`}>Scan the QR</div>
         <div className={`qrScanner ${showInfoGuest ? 'blur-background' : ''}`}>
           <div id="qrCodeContainer"></div>
         </div>
         {showInfoGuest && (
             <div className="info-guest-container">
-              <InfoGuest onClose={toggleInfoGuest} visible={true} name={'Andrey'} surname={'Gerasimov'}/>
+              <InfoGuest onClose={toggleInfoGuest}/>
             </div>
         )}
-      </div>
+        <Outlet/>
+      </>
   );
 
 }

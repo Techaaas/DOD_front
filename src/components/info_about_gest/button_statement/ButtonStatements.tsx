@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
 import FileUploader from '../file_uploader/FileUploader'; // Adjust the import path as necessary
 import './ButtonStatments.css';
-import { useNavigate } from 'react-router-dom';
+import {useNavigate} from 'react-router-dom';
 
 type ButtonStatementsProps = {
   onFileSubmitStatement: () => void;
