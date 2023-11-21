@@ -44,7 +44,7 @@ function QrScan() {
 
     return (
         <>
-            <div className={`textScan ${showInfoGuest ? 'blur-background' : ''}`}>Scan the QR</div>
+            <div className={`textScan ${showInfoGuest ? 'blur-background' : ''}`}>Scan the QR!</div>
             <div className={`qrScanner ${showInfoGuest ? 'blur-background' : ''}`}>
                 <div id="qrCodeContainer"></div>
             </div>

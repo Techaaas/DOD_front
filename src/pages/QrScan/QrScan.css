@@ -34,7 +34,7 @@
 .textScan {
     position: absolute;
     color: #000000;
-    left: calc(100% / 2.85);
+    left: calc(50% - 76px);
     top: 100px;
     font-family: Alata, serif;
     font-size: 27px;
