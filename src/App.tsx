@@ -28,7 +28,7 @@ export const allRoutes = [
 
 function App() {
   return (
-      <BrowserRouter basename="/">
+      <BrowserRouter basename="/DOD_front">
 
         <Routes>
           {allRoutes.map((route) => {
