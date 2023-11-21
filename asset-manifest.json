@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/DOD_front/static/css/main.be718281.css",
+    "main.js": "/DOD_front/static/js/main.e997729a.js",
+    "index.html": "/DOD_front/index.html",
+    "main.be718281.css.map": "/DOD_front/static/css/main.be718281.css.map",
+    "main.e997729a.js.map": "/DOD_front/static/js/main.e997729a.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.be718281.css",
+    "static/js/main.e997729a.js"
+  ]
+}
