@@ -5,12 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="856ef07d-255f-46dc-a02c-54993a8e2c92" name="Changes" comment="HotFix 1.7">
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/authorization/header/header.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/authorization/Header/Header.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/authorization/header/header.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/authorization/Header/Header.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/QrScan/QrScan.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/QrScan/QrScan.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/QrScan/QrScan.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/QrScan/QrScan.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -38,7 +33,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="darya_pages" />
+        <entry key="$PROJECT_DIR$" value="main" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -97,7 +92,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "main",
+    "git-widget-placeholder": "adaptive__darya__pages",
     "list.type.of.created.stylesheet": "CSS",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
@@ -123,7 +118,7 @@
       <recent name="$PROJECT_DIR$/src/components/info_about_gest/file_uploader_sender" />
     </key>
   </component>
-  <component name="RunManager" selected="npm.predeploy">
+  <component name="RunManager" selected="npm.deploy">
     <configuration name="deploy" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
       <package-json value="$PROJECT_DIR$/package.json" />
       <command value="run" />
@@ -131,6 +126,7 @@
         <script value="deploy" />
       </scripts>
       <node-interpreter value="project" />
+      <package-manager value="npm" />
       <envs />
       <method v="2" />
     </configuration>
@@ -151,14 +147,15 @@
         <script value="predeploy" />
       </scripts>
       <node-interpreter value="project" />
+      <package-manager value="npm" />
       <envs />
       <method v="2" />
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="npm.deploy" />
         <item itemvalue="npm.predeploy" />
         <item itemvalue="npm.eject" />
-        <item itemvalue="npm.deploy" />
         <item itemvalue="npm.predeploy" />
         <item itemvalue="npm.eject" />
       </list>
