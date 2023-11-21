@@ -4,10 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="856ef07d-255f-46dc-a02c-54993a8e2c92" name="Changes" comment="Form of the partipiciant centered">
+    <list default="true" id="856ef07d-255f-46dc-a02c-54993a8e2c92" name="Changes" comment="Form of the partipiciants centered, added prioritized z-index">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/InfoGuest/InfoGuest.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/InfoGuest/InfoGuest.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/QrScan/QrScan.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/QrScan/QrScan.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/QrScan/QrScan.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/QrScan/QrScan.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -184,7 +184,7 @@
       <workItem from="1699962061071" duration="99212000" />
       <workItem from="1700346406808" duration="647000" />
       <workItem from="1700589585898" duration="2690000" />
-      <workItem from="1700595379388" duration="6976000" />
+      <workItem from="1700595379388" duration="7245000" />
     </task>
     <task id="LOCAL-00001" summary="Base">
       <option name="closed" value="true" />
@@ -450,7 +450,15 @@
       <option name="project" value="LOCAL" />
       <updated>1700602285163</updated>
     </task>
-    <option name="localTasksCounter" value="34" />
+    <task id="LOCAL-00034" summary="Form of the partipiciants centered, added prioritized z-index">
+      <option name="closed" value="true" />
+      <created>1700602497096</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1700602497096</updated>
+    </task>
+    <option name="localTasksCounter" value="35" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -496,7 +504,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Add uploader" />
     <MESSAGE value="Add Button Passport, Button Statements and Take Photo" />
     <MESSAGE value="Update 1.1" />
     <MESSAGE value="Update 1.2 Implementation visible buttons on different state" />
@@ -521,6 +528,7 @@
     <MESSAGE value="Video got fixed" />
     <MESSAGE value="Some areas got centred" />
     <MESSAGE value="Form of the partipiciant centered" />
-    <option name="LAST_COMMIT_MESSAGE" value="Form of the partipiciant centered" />
+    <MESSAGE value="Form of the partipiciants centered, added prioritized z-index" />
+    <option name="LAST_COMMIT_MESSAGE" value="Form of the partipiciants centered, added prioritized z-index" />
   </component>
 </project>
