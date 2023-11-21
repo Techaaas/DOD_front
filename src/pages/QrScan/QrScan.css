@@ -5,8 +5,9 @@
     /*left: 29px;*/
     /*width: 302px;*/
     /*height: 530px;*/
+
     /* THE LAST THE BEST VERSION: */
-    top: calc(22%);
+    /*top: calc(22%);*/
     /*left: calc(20%);*/
 
     /*top: 50%;*/
@@ -17,8 +18,9 @@
     /*height: calc(75%);*/
     /*width: calc(50%);*/
     /*height: calc(50%);*/
-    width: calc(80vw - 10px);
-    height: calc(80vw - 10px);
+    width: calc(90vw - 10px);
+    height: calc(90vw - 10px);
+    top: calc(50% - (80vw - 10px) / 2);
     left: calc(50% - (80vw - 10px) / 2);
     border-radius: 5px;
     overflow: hidden;
