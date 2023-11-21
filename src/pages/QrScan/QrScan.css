@@ -1,20 +1,16 @@
-body {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-}
-
-.qrScanner_page {
-    margin-top: 29px;
-}
-
 .qrScanner {
-    position: absolute;
-    top: 140px;
-    left: 30px;
-    width: 302px;
-    height: 530px;
+    position: fixed;
+
+    /*top: 150px;*/
+    /*left: 29px;*/
+    /*width: 302px;*/
+    /*height: 530px;*/
+
+    top: calc(22%);
+    left: calc(8%);
+    width: calc(84%);
+    height: calc(78%);
+
     border-radius: 5px;
     overflow: hidden;
     display: flex;
@@ -26,16 +22,19 @@ body {
 .textScan {
     position: absolute;
     color: #000;
-    top: 80px;
-    left: 100px;
+    /*left: 110px;*/
+    left: 50%;
+    top: 90px;
     font-family: Alata, serif;
     font-size: 27px;
 }
 
 #qrCodeContainer {
     position: absolute;
-    width: 100vw;
-    height: 100vh;
+    /*width: 100vw;*/
+    /*height: 100vh;*/
+    width: calc(53%);
+    height: calc(100%);
     border-radius: 7px;
     overflow: hidden;
 }
