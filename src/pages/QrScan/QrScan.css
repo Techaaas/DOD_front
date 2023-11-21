@@ -18,6 +18,7 @@
     /*height: calc(75%);*/
     /*width: calc(50%);*/
     /*height: calc(50%);*/
+
     width: calc(90vw - 10px);
     height: calc(90vw - 10px);
     top: calc(50% - (80vw - 10px) / 2);
