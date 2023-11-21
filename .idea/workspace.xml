@@ -4,7 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="856ef07d-255f-46dc-a02c-54993a8e2c92" name="Changes" comment="Aligned block with the photo v.2.0">
+    <list default="true" id="856ef07d-255f-46dc-a02c-54993a8e2c92" name="Changes" comment="Aligned block with the photo v.3.0">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/TakePhoto/TakePhoto.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/TakePhoto/TakePhoto.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -182,7 +183,7 @@
       <workItem from="1699962061071" duration="99212000" />
       <workItem from="1700346406808" duration="647000" />
       <workItem from="1700589585898" duration="2690000" />
-      <workItem from="1700595379388" duration="12709000" />
+      <workItem from="1700595379388" duration="13221000" />
     </task>
     <task id="LOCAL-00001" summary="Base">
       <option name="closed" value="true" />
@@ -568,7 +569,15 @@
       <option name="project" value="LOCAL" />
       <updated>1700607798171</updated>
     </task>
-    <option name="localTasksCounter" value="49" />
+    <task id="LOCAL-00049" summary="Aligned block with the photo v.3.0">
+      <option name="closed" value="true" />
+      <created>1700608253978</created>
+      <option name="number" value="00049" />
+      <option name="presentableId" value="LOCAL-00049" />
+      <option name="project" value="LOCAL" />
+      <updated>1700608253978</updated>
+    </task>
+    <option name="localTasksCounter" value="50" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -614,7 +623,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="HotFix 1.5" />
     <MESSAGE value="Update 2.1 Merge QR scanner and window info about guest, add button close window info about guest" />
     <MESSAGE value="HotFix 1.7" />
     <MESSAGE value="Test CI/CD" />
@@ -639,6 +647,7 @@
     <MESSAGE value="Aligned screenshot" />
     <MESSAGE value="Aligned block with the photo" />
     <MESSAGE value="Aligned block with the photo v.2.0" />
-    <option name="LAST_COMMIT_MESSAGE" value="Aligned block with the photo v.2.0" />
+    <MESSAGE value="Aligned block with the photo v.3.0" />
+    <option name="LAST_COMMIT_MESSAGE" value="Aligned block with the photo v.3.0" />
   </component>
 </project>
