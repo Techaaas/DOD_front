@@ -33,7 +33,7 @@
     top: 100px;
     font-family: Alata, serif;
     font-size: 27px;
-    z-index: 500;
+    z-index: 5;
 }
 
 #qrCodeContainer {
