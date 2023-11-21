@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/DOD_front/static/css/main.be718281.css",
-    "main.js": "/DOD_front/static/js/main.e997729a.js",
+    "main.css": "/DOD_front/static/css/main.d7bc6e57.css",
+    "main.js": "/DOD_front/static/js/main.d072718a.js",
     "index.html": "/DOD_front/index.html",
-    "main.be718281.css.map": "/DOD_front/static/css/main.be718281.css.map",
-    "main.e997729a.js.map": "/DOD_front/static/js/main.e997729a.js.map"
+    "main.d7bc6e57.css.map": "/DOD_front/static/css/main.d7bc6e57.css.map",
+    "main.d072718a.js.map": "/DOD_front/static/js/main.d072718a.js.map"
   },
   "entrypoints": [
-    "static/css/main.be718281.css",
-    "static/js/main.e997729a.js"
+    "static/css/main.d7bc6e57.css",
+    "static/js/main.d072718a.js"
   ]
 }
