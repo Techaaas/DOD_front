@@ -4,10 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="856ef07d-255f-46dc-a02c-54993a8e2c92" name="Changes" comment="add github ci/cd">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/InfoGuest/InfoGuest.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/InfoGuest/InfoGuest.tsx" afterDir="false" />
+    <list default="true" id="856ef07d-255f-46dc-a02c-54993a8e2c92" name="Changes" comment="HotFix 1.11">
+      <change beforePath="$PROJECT_DIR$/src/components/info_about_gest/button_statement/ButtonStatements.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/info_about_gest/button_statement/ButtonStatements.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -369,7 +367,15 @@
       <option name="project" value="LOCAL" />
       <updated>1700587797010</updated>
     </task>
-    <option name="localTasksCounter" value="25" />
+    <task id="LOCAL-00025" summary="HotFix 1.11">
+      <option name="closed" value="true" />
+      <created>1700590819648</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1700590819648</updated>
+    </task>
+    <option name="localTasksCounter" value="26" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -437,6 +443,7 @@
     <MESSAGE value="HotFix 1.7" />
     <MESSAGE value="Test CI/CD" />
     <MESSAGE value="add github ci/cd" />
-    <option name="LAST_COMMIT_MESSAGE" value="add github ci/cd" />
+    <MESSAGE value="HotFix 1.11" />
+    <option name="LAST_COMMIT_MESSAGE" value="HotFix 1.11" />
   </component>
 </project>

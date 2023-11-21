@@ -15,7 +15,7 @@ const ButtonStatements: React.FC<ButtonStatementsProps> = ({onFileSubmitStatemen
   const navigate = useNavigate();
   const handleTakePhotoClick = () => {
     setShowUpload(false);
-    navigate('/take_photo')
+    navigate('/photo')
   };
 
   const handleFileRemoved = () => {
