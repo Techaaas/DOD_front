@@ -4,9 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="856ef07d-255f-46dc-a02c-54993a8e2c92" name="Changes" comment="Aligned authorization button and camera shot button">
+    <list default="true" id="856ef07d-255f-46dc-a02c-54993a8e2c92" name="Changes" comment="Aligned authorization button and camera shot button v.2.0">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/QrScan/QrScan.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/QrScan/QrScan.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/TakePhoto/TakePhoto.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/TakePhoto/TakePhoto.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -183,7 +183,7 @@
       <workItem from="1699962061071" duration="99212000" />
       <workItem from="1700346406808" duration="647000" />
       <workItem from="1700589585898" duration="2690000" />
-      <workItem from="1700595379388" duration="10737000" />
+      <workItem from="1700595379388" duration="11312000" />
     </task>
     <task id="LOCAL-00001" summary="Base">
       <option name="closed" value="true" />
@@ -521,7 +521,15 @@
       <option name="project" value="LOCAL" />
       <updated>1700605892375</updated>
     </task>
-    <option name="localTasksCounter" value="43" />
+    <task id="LOCAL-00043" summary="Aligned authorization button and camera shot button v.2.0">
+      <option name="closed" value="true" />
+      <created>1700606370344</created>
+      <option name="number" value="00043" />
+      <option name="presentableId" value="LOCAL-00043" />
+      <option name="project" value="LOCAL" />
+      <updated>1700606370344</updated>
+    </task>
+    <option name="localTasksCounter" value="44" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -567,7 +575,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="HotFix 1.4" />
     <MESSAGE value="HotFix 1.5 change size buttons and titles" />
     <MESSAGE value="Update 1.5 Add page take photo, edit bugs" />
     <MESSAGE value="HotFix 1.2 display error fixed" />
@@ -592,6 +599,7 @@
     <MESSAGE value="Resized video borders v.3.0" />
     <MESSAGE value="Resized main scan text" />
     <MESSAGE value="Aligned authorization button and camera shot button" />
-    <option name="LAST_COMMIT_MESSAGE" value="Aligned authorization button and camera shot button" />
+    <MESSAGE value="Aligned authorization button and camera shot button v.2.0" />
+    <option name="LAST_COMMIT_MESSAGE" value="Aligned authorization button and camera shot button v.2.0" />
   </component>
 </project>

@@ -11,7 +11,8 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 100vw;
+    /*width: 100vw;*/
+    width: calc(100vw - 10px);
     top: 121px;
 }
 
@@ -36,7 +37,8 @@
     align-items: center;
     position: absolute;
     top: 570px;
-    left: 130px;
+    /*left: 130px;*/
+    left: calc(50% - 50px);
 }
 
 .button_retake_photo svg {
@@ -54,5 +56,6 @@
     position: absolute;
     padding: 1px 80px 3px 80px;
     top: 530px;
-    left: 70px;
+    /*left: 70px;*/
+    left: calc(50% - 122px);
 }
