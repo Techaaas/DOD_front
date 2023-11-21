@@ -5,9 +5,13 @@
     /*left: 29px;*/
     /*width: 302px;*/
     /*height: 530px;*/
-
+    /* THE LAST THE BEST VERSION: */
     top: calc(22%);
     left: calc(20%);
+    /*top: 50%;*/
+    /*left: 50%;*/
+    /*transform: translate(-50%, -50%);*/
+
     /*width: calc(84%);*/
     /*height: calc(75%);*/
     /*width: calc(50%);*/
@@ -29,6 +33,7 @@
     top: 100px;
     font-family: Alata, serif;
     font-size: 27px;
+    z-index: 500;
 }
 
 #qrCodeContainer {
