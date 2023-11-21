@@ -1,14 +1,14 @@
 import "./buttonLink.css"
 
-function ButtonLink () {
-    let url="https://www.github.com";
-    return(
-    <div  className="buttonLink">
+function ButtonLink() {
+  let url = "http://localhost:3000/DOD_front/";
+  return (
+      <div className="buttonLink">
         <a href={url}>Log in by
-            Innopolis University
+          Innopolis University
         </a>
-    </div>
-    )
+      </div>
+  )
 }
 
 export default ButtonLink
