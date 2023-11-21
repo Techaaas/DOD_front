@@ -6,13 +6,10 @@ import axios from 'axios';
 import data from '../../data/info_guest.json'
 
 interface InfoGuestProps {
-  visible: boolean
-  name: string
-  surname: string
   onClose: () => void;
 }
 
-const InfoGuest: FC<InfoGuestProps> = ({visible, onClose}) => {
+const InfoGuest: FC<InfoGuestProps> = ({onClose}) => {
 
   const [isStatementSelected, setIsStatementSelected] = useState(() => false);
   const [isPassportSelected, setIsPassportSelected] = useState(() => false);
@@ -25,8 +22,6 @@ const InfoGuest: FC<InfoGuestProps> = ({visible, onClose}) => {
   const [tempName, setTempName] = useState(editableName);
   const [tempSurname, setTempSurname] = useState(editableSurname);
 
-
-  if (!visible) return null;
 
   const handleConfirmChanges = () => {
     console.log('File submitted');
@@ -68,7 +63,7 @@ const InfoGuest: FC<InfoGuestProps> = ({visible, onClose}) => {
 
   return (
       <div>
-        <div className='info_guest' style={{display: visible ? 'block' : 'none'}}>
+        <div className='info_guest'>
           <div className='info_guest-dialog'>
             <div className='info_guest-header'>
               <div className='info_guest-title'>Participant form</div>

@@ -1,11 +1,5 @@
-body {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
 .info_guest {
-    position: relative;
+    position: absolute;
     top: 42px;
     width: 302px;
     height: 565px;
