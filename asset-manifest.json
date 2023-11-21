@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/DOD_front/static/css/main.dbcad567.css",
+    "main.css": "/DOD_front/static/css/main.fe18fc8f.css",
     "main.js": "/DOD_front/static/js/main.8794b6cf.js",
     "index.html": "/DOD_front/index.html",
-    "main.dbcad567.css.map": "/DOD_front/static/css/main.dbcad567.css.map",
+    "main.fe18fc8f.css.map": "/DOD_front/static/css/main.fe18fc8f.css.map",
     "main.8794b6cf.js.map": "/DOD_front/static/js/main.8794b6cf.js.map"
   },
   "entrypoints": [
-    "static/css/main.dbcad567.css",
+    "static/css/main.fe18fc8f.css",
     "static/js/main.8794b6cf.js"
   ]
 }
