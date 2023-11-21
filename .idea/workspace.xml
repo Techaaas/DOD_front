@@ -4,15 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="856ef07d-255f-46dc-a02c-54993a8e2c92" name="Changes" comment="Delete unnecessary ci/cd">
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_19_11_2023__01_23__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_19_11_2023__01_23__Changes_.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_19_11_2023__01_30__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_19_11_2023__01_30__Changes_.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_19_11_2023__01_30__Changes_1.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_19_11_2023__01_30__Changes_1.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_19_11_2023__01_30__Changes_2.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_19_11_2023__01_30__Changes_2.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_20_11_2023__03_03__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_20_11_2023__03_03__Changes_.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_19_11_2023__07_29__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_19_11_2023__07_29__Changes_.xml" afterDir="false" />
+    <list default="true" id="856ef07d-255f-46dc-a02c-54993a8e2c92" name="Changes" comment="Fixed the scanner window">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/QrScan/QrScan.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/QrScan/QrScan.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/QrScan/QrScan.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/QrScan/QrScan.tsx" afterDir="false" />
     </list>
@@ -191,7 +184,7 @@
       <workItem from="1699962061071" duration="99212000" />
       <workItem from="1700346406808" duration="647000" />
       <workItem from="1700589585898" duration="2690000" />
-      <workItem from="1700595379388" duration="2496000" />
+      <workItem from="1700595379388" duration="4062000" />
     </task>
     <task id="LOCAL-00001" summary="Base">
       <option name="closed" value="true" />
@@ -393,7 +386,15 @@
       <option name="project" value="LOCAL" />
       <updated>1700589639715</updated>
     </task>
-    <option name="localTasksCounter" value="26" />
+    <task id="LOCAL-00026" summary="Fixed the scanner window">
+      <option name="closed" value="true" />
+      <created>1700597986783</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1700597986784</updated>
+    </task>
+    <option name="localTasksCounter" value="27" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -462,6 +463,7 @@
     <MESSAGE value="Test CI/CD" />
     <MESSAGE value="Fix merge conflict" />
     <MESSAGE value="Delete unnecessary ci/cd" />
-    <option name="LAST_COMMIT_MESSAGE" value="Delete unnecessary ci/cd" />
+    <MESSAGE value="Fixed the scanner window" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fixed the scanner window" />
   </component>
 </project>
