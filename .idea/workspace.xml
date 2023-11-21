@@ -4,8 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="856ef07d-255f-46dc-a02c-54993a8e2c92" name="Changes" comment="Aligned screenshot">
+    <list default="true" id="856ef07d-255f-46dc-a02c-54993a8e2c92" name="Changes" comment="Aligned block with the photo">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/QrScan/QrScan.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/QrScan/QrScan.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/TakePhoto/TakePhoto.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/TakePhoto/TakePhoto.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/TakePhoto/TakePhoto.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/TakePhoto/TakePhoto.tsx" afterDir="false" />
     </list>
@@ -184,7 +185,7 @@
       <workItem from="1699962061071" duration="99212000" />
       <workItem from="1700346406808" duration="647000" />
       <workItem from="1700589585898" duration="2690000" />
-      <workItem from="1700595379388" duration="12091000" />
+      <workItem from="1700595379388" duration="12257000" />
     </task>
     <task id="LOCAL-00001" summary="Base">
       <option name="closed" value="true" />
@@ -554,7 +555,15 @@
       <option name="project" value="LOCAL" />
       <updated>1700607280987</updated>
     </task>
-    <option name="localTasksCounter" value="47" />
+    <task id="LOCAL-00047" summary="Aligned block with the photo">
+      <option name="closed" value="true" />
+      <created>1700607640784</created>
+      <option name="number" value="00047" />
+      <option name="presentableId" value="LOCAL-00047" />
+      <option name="project" value="LOCAL" />
+      <updated>1700607640784</updated>
+    </task>
+    <option name="localTasksCounter" value="48" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -600,7 +609,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="HotFix 1.2 display error fixed" />
     <MESSAGE value="Update 1.6 Setting routes for pages" />
     <MESSAGE value="HotFix 1.5" />
     <MESSAGE value="Update 2.1 Merge QR scanner and window info about guest, add button close window info about guest" />
@@ -625,6 +633,7 @@
     <MESSAGE value="Aligned screenshot button, aligned retake and submit buttons" />
     <MESSAGE value="Test commit" />
     <MESSAGE value="Aligned screenshot" />
-    <option name="LAST_COMMIT_MESSAGE" value="Aligned screenshot" />
+    <MESSAGE value="Aligned block with the photo" />
+    <option name="LAST_COMMIT_MESSAGE" value="Aligned block with the photo" />
   </component>
 </project>
