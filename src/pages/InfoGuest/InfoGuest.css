@@ -1,8 +1,10 @@
 .info_guest {
     position: absolute;
-    top: 42px;
     width: 302px;
     height: 565px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     flex-shrink: 0;
     border-radius: 20px;
     background: #FFF;
