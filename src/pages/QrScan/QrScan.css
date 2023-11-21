@@ -7,7 +7,8 @@
     /*height: 530px;*/
     /* THE LAST THE BEST VERSION: */
     top: calc(22%);
-    left: calc(20%);
+    /*left: calc(20%);*/
+
     /*top: 50%;*/
     /*left: 50%;*/
     /*transform: translate(-50%, -50%);*/
@@ -18,6 +19,7 @@
     /*height: calc(50%);*/
     width: calc(80vw - 10px);
     height: calc(80vw - 10px);
+    left: calc(50% - (80vw - 10px) / 2);
     border-radius: 5px;
     overflow: hidden;
     display: flex;
@@ -28,7 +30,7 @@
 
 .textScan {
     position: absolute;
-    color: #40ba21;
+    color: #000000;
     left: calc(100% / 2.85);
     top: 100px;
     font-family: Alata, serif;
