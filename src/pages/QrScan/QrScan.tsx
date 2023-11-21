@@ -7,7 +7,7 @@ import {Outlet} from 'react-router-dom';
 function QrScan() {
     const [isEnabled, setEnabled] = useState(true);
     // const [qrMessage, setMessage] = useState("");
-    const [showInfoGuest, setShowInfoGuest] = useState(true);
+    const [showInfoGuest, setShowInfoGuest] = useState(false);
     const toggleInfoGuest = () => {
         setShowInfoGuest(!showInfoGuest);
         setEnabled(true);
