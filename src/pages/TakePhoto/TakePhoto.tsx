@@ -1,6 +1,7 @@
 import React, {FC, useCallback, useRef, useState} from 'react';
 import Webcam from "react-webcam";
 import './TakePhoto.css'
+import {useNavigate} from 'react-router-dom';
 
 interface TakePhotoProps {
   onFileSubmitTakePhoto?: (img: string | null) => void;
@@ -10,6 +11,7 @@ interface TakePhotoProps {
 const TakePhoto: FC<TakePhotoProps> = ({onFileSubmitTakePhoto, onFileSelectionTakePhoto}) => {
   const [img, setImg] = useState<string | null>(null);
   const webcamRef = useRef<Webcam | null>(null);
+  const navigate = useNavigate();
 
   const videoConstraints = {
     width: {min: 600},
@@ -31,7 +33,7 @@ const TakePhoto: FC<TakePhotoProps> = ({onFileSubmitTakePhoto, onFileSelectionTa
     if (onFileSelectionTakePhoto) {
       onFileSelectionTakePhoto(true)
     }
-    console.log()
+    navigate(-1);
   };
 
 
