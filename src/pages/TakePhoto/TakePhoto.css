@@ -11,8 +11,8 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    /*width: 100vw;*/
-    width: calc(100vw - 10px);
+    width: calc(80vw - 5px);
+    height: calc(80vw - 5px);;
     top: 121px;
 }
 
@@ -23,7 +23,6 @@
     align-items: center;
     top: 570px;
     left: calc(50% - 35px);
-    /*left: 145px;*/
 }
 
 .icon_photo {

@@ -4,8 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="856ef07d-255f-46dc-a02c-54993a8e2c92" name="Changes" comment="Aligned authorization button and camera shot button v.2.0">
+    <list default="true" id="856ef07d-255f-46dc-a02c-54993a8e2c92" name="Changes" comment="Test commit">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/QrScan/QrScan.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/QrScan/QrScan.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/TakePhoto/TakePhoto.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/TakePhoto/TakePhoto.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -183,7 +184,7 @@
       <workItem from="1699962061071" duration="99212000" />
       <workItem from="1700346406808" duration="647000" />
       <workItem from="1700589585898" duration="2690000" />
-      <workItem from="1700595379388" duration="11312000" />
+      <workItem from="1700595379388" duration="11758000" />
     </task>
     <task id="LOCAL-00001" summary="Base">
       <option name="closed" value="true" />
@@ -529,7 +530,23 @@
       <option name="project" value="LOCAL" />
       <updated>1700606370344</updated>
     </task>
-    <option name="localTasksCounter" value="44" />
+    <task id="LOCAL-00044" summary="Aligned screenshot button, aligned retake and submit buttons">
+      <option name="closed" value="true" />
+      <created>1700606876583</created>
+      <option name="number" value="00044" />
+      <option name="presentableId" value="LOCAL-00044" />
+      <option name="project" value="LOCAL" />
+      <updated>1700606876583</updated>
+    </task>
+    <task id="LOCAL-00045" summary="Test commit">
+      <option name="closed" value="true" />
+      <created>1700607024093</created>
+      <option name="number" value="00045" />
+      <option name="presentableId" value="LOCAL-00045" />
+      <option name="project" value="LOCAL" />
+      <updated>1700607024093</updated>
+    </task>
+    <option name="localTasksCounter" value="46" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -575,7 +592,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="HotFix 1.5 change size buttons and titles" />
     <MESSAGE value="Update 1.5 Add page take photo, edit bugs" />
     <MESSAGE value="HotFix 1.2 display error fixed" />
     <MESSAGE value="Update 1.6 Setting routes for pages" />
@@ -587,7 +603,6 @@
     <MESSAGE value="Delete unnecessary ci/cd" />
     <MESSAGE value="Fixed the scanner window" />
     <MESSAGE value="Fixed the scanner window and text" />
-    <MESSAGE value="Test commit" />
     <MESSAGE value="Video got fixed" />
     <MESSAGE value="Some areas got centred" />
     <MESSAGE value="Form of the partipiciant centered" />
@@ -600,6 +615,8 @@
     <MESSAGE value="Resized main scan text" />
     <MESSAGE value="Aligned authorization button and camera shot button" />
     <MESSAGE value="Aligned authorization button and camera shot button v.2.0" />
-    <option name="LAST_COMMIT_MESSAGE" value="Aligned authorization button and camera shot button v.2.0" />
+    <MESSAGE value="Aligned screenshot button, aligned retake and submit buttons" />
+    <MESSAGE value="Test commit" />
+    <option name="LAST_COMMIT_MESSAGE" value="Test commit" />
   </component>
 </project>
