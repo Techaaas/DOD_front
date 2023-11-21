@@ -1,24 +1,5 @@
 .qrScanner {
     position: absolute;
-
-    /*top: 150px;*/
-    /*left: 29px;*/
-    /*width: 302px;*/
-    /*height: 530px;*/
-
-    /* THE LAST THE BEST VERSION: */
-    /*top: calc(22%);*/
-    /*left: calc(20%);*/
-
-    /*top: 50%;*/
-    /*left: 50%;*/
-    /*transform: translate(-50%, -50%);*/
-
-    /*width: calc(84%);*/
-    /*height: calc(75%);*/
-    /*width: calc(50%);*/
-    /*height: calc(50%);*/
-
     width: calc(85vw - 10px);
     height: calc(85vw - 10px);
     top: calc(50% - (85vw - 10px) / 2);
@@ -44,10 +25,6 @@
     position: absolute;
     width: 100%;
     padding-top: 100%;
-    /*width: 800px;*/
-    /*height: 800px;*/
-    /*width: calc(50%);*/
-    /*height: calc(100%);*/
     border-radius: 7px;
     overflow: hidden;
 }
@@ -60,23 +37,11 @@
 video {
     position: absolute;
     width: 100%;
-    /*max-width: 800px;*/
     height: 100%;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
 
-}
-
-.qr-message {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: #D9D9D9;
-    color: black;
-    font-size: 20px;
 }
 
 .blur-background {

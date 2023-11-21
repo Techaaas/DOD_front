@@ -7,7 +7,7 @@ import {Outlet} from 'react-router-dom';
 function QrScan() {
     const [isEnabled, setEnabled] = useState(true);
     // const [qrMessage, setMessage] = useState("");
-    const [showInfoGuest, setShowInfoGuest] = useState(false);
+    const [showInfoGuest, setShowInfoGuest] = useState(true);
     const toggleInfoGuest = () => {
         setShowInfoGuest(!showInfoGuest);
         setEnabled(true);
@@ -44,7 +44,7 @@ function QrScan() {
 
     return (
         <>
-            <div className={`textScan ${showInfoGuest ? 'blur-background' : ''}`}>Scan the QR!</div>
+            <div className={`textScan ${showInfoGuest ? 'blur-background' : ''}`}>Scan the QR</div>
             <div className={`qrScanner ${showInfoGuest ? 'blur-background' : ''}`}>
                 <div id="qrCodeContainer"></div>
             </div>
