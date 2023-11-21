@@ -1,5 +1,5 @@
 .qrScanner {
-    position: fixed;
+    position: absolute;
 
     /*top: 150px;*/
     /*left: 29px;*/
@@ -9,13 +9,13 @@
     top: calc(22%);
     left: calc(8%);
     width: calc(84%);
-    height: calc(78%);
+    height: calc(75%);
 
     border-radius: 5px;
     overflow: hidden;
     display: flex;
     background-color: #D9D9D9;
-    align-items: center;
+    /*align-items: center;*/
 
 }
 
@@ -31,10 +31,11 @@
 
 #qrCodeContainer {
     position: absolute;
-    /*width: 100vw;*/
-    /*height: 100vh;*/
-    width: calc(53%);
-    height: calc(100%);
+
+    /*width: 800px;*/
+    /*height: 800px;*/
+    /*width: calc(53%);*/
+    /*height: calc(100%);*/
     border-radius: 7px;
     overflow: hidden;
 }

@@ -4,9 +4,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="856ef07d-255f-46dc-a02c-54993a8e2c92" name="Changes" comment="Test CI/CD">
-      <change afterPath="$PROJECT_DIR$/.github/workflows/dev_darya.yml" afterDir="false" />
+    <list default="true" id="856ef07d-255f-46dc-a02c-54993a8e2c92" name="Changes" comment="Delete unnecessary ci/cd">
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_19_11_2023__01_23__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_19_11_2023__01_23__Changes_.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_19_11_2023__01_30__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_19_11_2023__01_30__Changes_.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_19_11_2023__01_30__Changes_1.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_19_11_2023__01_30__Changes_1.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_19_11_2023__01_30__Changes_2.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_19_11_2023__01_30__Changes_2.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_20_11_2023__03_03__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_20_11_2023__03_03__Changes_.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_19_11_2023__07_29__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_19_11_2023__07_29__Changes_.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/QrScan/QrScan.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/QrScan/QrScan.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/QrScan/QrScan.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/QrScan/QrScan.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -101,7 +109,7 @@
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
     &quot;settings.editor.selected.configurable&quot;: &quot;actions.on.save&quot;,
-    &quot;ts.external.directory.path&quot;: &quot;/Users/dehopen/WebstormProjects/DOD_front/node_modules/typescript/lib&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;C:\\Users\\Дарриана\\WebstormProject\\DOD_front\\node_modules\\typescript\\lib&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
   &quot;keyToStringList&quot;: {
@@ -119,7 +127,7 @@
       <recent name="$PROJECT_DIR$/src/components/info_about_gest/file_uploader_sender" />
     </key>
   </component>
-  <component name="RunManager" selected="npm.deploy">
+  <component name="RunManager" selected="npm.start">
     <configuration name="deploy" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
       <package-json value="$PROJECT_DIR$/package.json" />
       <command value="run" />
@@ -152,13 +160,23 @@
       <envs />
       <method v="2" />
     </configuration>
+    <configuration name="start" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="start" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="npm.start" />
         <item itemvalue="npm.deploy" />
         <item itemvalue="npm.predeploy" />
         <item itemvalue="npm.eject" />
-        <item itemvalue="npm.predeploy" />
-        <item itemvalue="npm.eject" />
+        <item itemvalue="npm.deploy" />
       </list>
     </recent_temporary>
   </component>
@@ -172,6 +190,8 @@
       <updated>1699962059924</updated>
       <workItem from="1699962061071" duration="99212000" />
       <workItem from="1700346406808" duration="647000" />
+      <workItem from="1700589585898" duration="2690000" />
+      <workItem from="1700595379388" duration="2496000" />
     </task>
     <task id="LOCAL-00001" summary="Base">
       <option name="closed" value="true" />
@@ -365,7 +385,15 @@
       <option name="project" value="LOCAL" />
       <updated>1700587797010</updated>
     </task>
-    <option name="localTasksCounter" value="25" />
+    <task id="LOCAL-00025" summary="Delete unnecessary ci/cd">
+      <option name="closed" value="true" />
+      <created>1700589639715</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1700589639715</updated>
+    </task>
+    <option name="localTasksCounter" value="26" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -397,7 +425,7 @@
                   <entry key="branch">
                     <value>
                       <list>
-                        <option value="origin/darya_pages" />
+                        <option value="adaptive_darya_pages" />
                       </list>
                     </value>
                   </entry>
@@ -432,6 +460,8 @@
     <MESSAGE value="Update 2.1 Merge QR scanner and window info about guest, add button close window info about guest" />
     <MESSAGE value="HotFix 1.7" />
     <MESSAGE value="Test CI/CD" />
-    <option name="LAST_COMMIT_MESSAGE" value="Test CI/CD" />
+    <MESSAGE value="Fix merge conflict" />
+    <MESSAGE value="Delete unnecessary ci/cd" />
+    <option name="LAST_COMMIT_MESSAGE" value="Delete unnecessary ci/cd" />
   </component>
 </project>
