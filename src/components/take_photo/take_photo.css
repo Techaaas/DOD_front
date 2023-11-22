@@ -11,7 +11,9 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 100vw;
+    width: calc(90vw - 5px);
+    height: calc(90vw - 5px);
+    left: calc(50% - (90vw - 5px) / 2);
     top: 121px;
 }
 
@@ -21,7 +23,7 @@
     justify-content: center;
     align-items: center;
     top: 570px;
-    left: 145px;
+    left: calc(50% - 35px);
 }
 
 .icon_photo {
@@ -29,13 +31,14 @@
 }
 
 .button_retake_photo {
-    color: #FFFFFF;
+    color: #000000;
     display: flex;
     justify-content: center;
     align-items: center;
     position: absolute;
     top: 570px;
-    left: 130px;
+    /*left: 130px;*/
+    left: calc(50% - 50px);
 }
 
 .button_retake_photo svg {
@@ -53,5 +56,7 @@
     position: absolute;
     padding: 1px 80px 3px 80px;
     top: 530px;
-    left: 70px;
+    width: 244px;
+    /*left: 70px;*/
+    left: calc(50% - 122px);
 }
