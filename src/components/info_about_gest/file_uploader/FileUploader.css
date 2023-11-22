@@ -1,0 +1,81 @@
+input[type="file"] {
+    display: none;
+}
+
+.file_name {
+    margin-top: -13px;
+    display: flex;
+    align-items: center;
+}
+
+.icon_name {
+    display: flex;
+    flex-direction: row;
+    flex-group: 1;
+    justify-content: center;
+    white-space: nowrap;
+}
+
+.icon_name svg {
+    margin-right: 5px;
+    margin-top: 2px;
+    width: 12px;
+    height: 12px;
+    flex-shrink: 0;
+}
+
+.file_name section {
+    display: inline-block;
+}
+
+.file_name span {
+    padding: 1px 8px 2px 13px;
+    border-radius: 7px;
+    background: rgba(217, 217, 217, 0.30);
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.file_buttons {
+    margin-left: 15px; /* Размещаем кнопку "Удалить" справа */
+}
+
+p svg {
+    width: 14px;
+    height: 14px;
+    flex-shrink: 0;
+}
+
+p {
+    color: #8E8E8E;
+    font-family: Alata, serif;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.input-file {
+    color: #FFF;
+    font-family: Alata, serif;
+    font-size: 13px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    padding: 4px 17px 5px 12px;
+    flex-shrink: 0;
+    background: #40BA21;
+    border-radius: 50px;
+    position: relative;
+    top: 2px;
+    display: flex;
+    flex-direction: row;
+    flex-group: 1;
+    justify-content: center;
+}
+
+.input-file svg {
+    margin-right: 5px;
+    margin-top: 1px;
+}
+
