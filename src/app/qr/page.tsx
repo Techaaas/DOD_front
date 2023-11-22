@@ -4,7 +4,8 @@ import React, {useState, useEffect} from 'react';
 import './qr_scan.css';
 import {Html5Qrcode} from "html5-qrcode";
 import InfoGuest from "../../components/info_about_gest/main_func/InfoGuest";
-
+import {Alata} from "next/font/google";
+const alata = Alata({weight: '400', subsets: ['latin']})
 function QrScan() {
   const [isEnabled, setEnabled] = useState(true);
   // const [qrMessage, setMessage] = useState("");
@@ -44,8 +45,10 @@ function QrScan() {
   }, [isEnabled]);
 
   return (
-      <>
-        <div className={`textScan ${showInfoGuest ? 'blur-background' : ''}`}>Scan the QR!</div>
+      <div className={alata.className}>
+        <div className={alata.className}>
+          <div className={`textScan ${showInfoGuest ? 'blur-background' : ''}`}>Scan the QR!</div>
+        </div>
         <div className={`qrScanner ${showInfoGuest ? 'blur-background' : ''}`}>
           <div id="qrCodeContainer"></div>
         </div>
@@ -54,7 +57,7 @@ function QrScan() {
               <InfoGuest onClose={toggleInfoGuest}/>
             </div>
         )}
-      </>
+      </div>
   );
 
 }

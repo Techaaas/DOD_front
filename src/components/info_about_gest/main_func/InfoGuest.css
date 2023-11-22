@@ -20,7 +20,7 @@
 .info_guest-title {
     position: absolute;
     color: #1E1E1E;
-    font-family: Alata, serif;
+
     font-size: 27px;
     font-style: normal;
     font-weight: 400;
@@ -52,7 +52,6 @@
 
 .info_guest-name-title {
     color: #1E1E1E;
-    font-family: Alata, serif;
     font-size: 20px;
     font-style: normal;
     font-weight: 400;
@@ -60,7 +59,6 @@
 }
 
 .info_guest-name-content {
-    font-family: Alata, serif;
     font-size: 18px;
     font-style: normal;
     font-weight: 400;
@@ -70,7 +68,6 @@
 
 .info_guest-surname-title {
     color: #1E1E1E;
-    font-family: Alata, serif;
     font-size: 20px;
     font-style: normal;
     font-weight: 400;
@@ -78,7 +75,6 @@
 }
 
 .info_guest-surname-content {
-    font-family: Alata, serif;
     font-size: 18px;
     font-style: normal;
     font-weight: 400;
@@ -92,7 +88,6 @@
 
 .info_guest-statement-title {
     color: #1E1E1E;
-    font-family: Alata, serif;
     font-size: 20px;
     font-style: normal;
     font-weight: 400;
@@ -105,7 +100,6 @@
 
 .info_guest-passport-title {
     color: #1E1E1E;
-    font-family: Alata, serif;
     font-size: 20px;
     font-style: normal;
     font-weight: 400;
@@ -119,7 +113,6 @@
 
 .button_submit {
     position: absolute;
-    font-family: Alata, serif;
     font-size: 20px;
     font-style: normal;
     font-weight: 400;

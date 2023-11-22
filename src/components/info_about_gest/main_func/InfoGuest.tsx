@@ -6,11 +6,12 @@ import ButtonStatements from "../button_statement/ButtonStatements";
 import ButtonPassport from "../button_passport/ButtonPassport";
 import axios from 'axios';
 import data from '../../../data/info_guest.json'
+import {Alata} from "next/font/google";
 
 interface InfoGuestProps {
   onClose: () => void;
 }
-
+const alata = Alata({weight: '400', subsets: ['latin']})
 const InfoGuest: FC<InfoGuestProps> = ({onClose}) => {
 
   const [isStatementSelected, setIsStatementSelected] = useState(() => false);
@@ -64,7 +65,7 @@ const InfoGuest: FC<InfoGuestProps> = ({onClose}) => {
 
 
   return (
-      <div>
+      <div className={alata.className}>
         <div className='info_guest'>
           <div className='info_guest-dialog'>
             <div className='info_guest-header'>

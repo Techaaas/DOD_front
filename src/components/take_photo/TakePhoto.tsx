@@ -3,6 +3,7 @@
 import React, {FC, useCallback, useRef, useState} from 'react';
 import Webcam from "react-webcam";
 import './take_photo.css'
+import Link from "next/link";
 
 interface TakePhotoProps {
   onFileSubmitTakePhoto?: (img: string | null) => void;
@@ -90,7 +91,9 @@ const TakePhoto: FC<TakePhotoProps> = ({onFileSubmitTakePhoto, onFileSelectionTa
                   </svg>
                   Retake
                 </button>
-                <button className='button_submit_photo' onClick={handleSubmit}>Submit</button>
+                <Link href={'/qr'}>
+                  <button className='button_submit_photo' onClick={handleSubmit}>Submit</button>
+                </Link>
               </div>
           )}
         </div>
