@@ -4,7 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="856ef07d-255f-46dc-a02c-54993a8e2c92" name="Changes" comment="Aligned block with the photo v.3.0">
+    <list default="true" id="856ef07d-255f-46dc-a02c-54993a8e2c92" name="Changes" comment="Aligned block with the photo v.4.0&#10;Added width for the button">
+      <change afterPath="$PROJECT_DIR$/src/components/guest_panel/GuestPanel.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/guest_panel/guestPanel.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/GuestList/GuestList.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/GuestList/GuestList.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/TakePhoto/TakePhoto.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/TakePhoto/TakePhoto.css" afterDir="false" />
     </list>
@@ -23,8 +27,8 @@
       <list>
         <option value="TypeScript File" />
         <option value="package.json" />
-        <option value="CSS File" />
         <option value="TypeScript JSX File" />
+        <option value="CSS File" />
       </list>
     </option>
   </component>
@@ -87,29 +91,30 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;adaptive__darya__pages&quot;,
-    &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;actions.on.save&quot;,
-    &quot;ts.external.directory.path&quot;: &quot;C:\\Users\\Дарриана\\WebstormProject\\DOD_front\\node_modules\\typescript\\lib&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "git-widget-placeholder": "adaptive__darya__pages",
+    "last_opened_file_path": "C:/Users/Дарриана/WebstormProject/untitled4",
+    "list.type.of.created.stylesheet": "CSS",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "actions.on.save",
+    "ts.external.directory.path": "C:\\Users\\Дарриана\\WebstormProject\\DOD_front\\node_modules\\typescript\\lib",
+    "vue.rearranger.settings.migration": "true"
   },
-  &quot;keyToStringList&quot;: {
-    &quot;ChangesTree.GroupingKeys&quot;: [
-      &quot;directory&quot;
+  "keyToStringList": {
+    "ChangesTree.GroupingKeys": [
+      "directory"
     ]
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/pages/Authorization" />
@@ -183,15 +188,7 @@
       <workItem from="1699962061071" duration="99212000" />
       <workItem from="1700346406808" duration="647000" />
       <workItem from="1700589585898" duration="2690000" />
-      <workItem from="1700595379388" duration="13221000" />
-    </task>
-    <task id="LOCAL-00001" summary="Base">
-      <option name="closed" value="true" />
-      <created>1699963332809</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1699963332809</updated>
+      <workItem from="1700595379388" duration="19522000" />
     </task>
     <task id="LOCAL-00002" summary="Base">
       <option name="closed" value="true" />
@@ -577,7 +574,15 @@
       <option name="project" value="LOCAL" />
       <updated>1700608253978</updated>
     </task>
-    <option name="localTasksCounter" value="50" />
+    <task id="LOCAL-00050" summary="Aligned block with the photo v.4.0&#10;Added width for the button">
+      <option name="closed" value="true" />
+      <created>1700608847352</created>
+      <option name="number" value="00050" />
+      <option name="presentableId" value="LOCAL-00050" />
+      <option name="project" value="LOCAL" />
+      <updated>1700608847352</updated>
+    </task>
+    <option name="localTasksCounter" value="51" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -623,7 +628,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Update 2.1 Merge QR scanner and window info about guest, add button close window info about guest" />
     <MESSAGE value="HotFix 1.7" />
     <MESSAGE value="Test CI/CD" />
     <MESSAGE value="Fix merge conflict" />
@@ -648,6 +652,7 @@
     <MESSAGE value="Aligned block with the photo" />
     <MESSAGE value="Aligned block with the photo v.2.0" />
     <MESSAGE value="Aligned block with the photo v.3.0" />
-    <option name="LAST_COMMIT_MESSAGE" value="Aligned block with the photo v.3.0" />
+    <MESSAGE value="Aligned block with the photo v.4.0&#10;Added width for the button" />
+    <option name="LAST_COMMIT_MESSAGE" value="Aligned block with the photo v.4.0&#10;Added width for the button" />
   </component>
 </project>

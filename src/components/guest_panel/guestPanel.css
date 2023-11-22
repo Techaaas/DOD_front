@@ -1,0 +1,35 @@
+.guestPanel {
+    font-family: Alata, serif;
+    width: 249px;
+    height: 52px;
+    background-color: #E1E1E1;
+    color: #8E8E8E;
+    border-radius: 5px;
+    margin-bottom: 25px;
+}
+
+.guestPanelApproved {
+    font-family: Alata, serif;
+    width: 249px;
+    height: 52px;
+    background-color: #E1E1E1;
+    color: #1E1E1E;
+    border-radius: 5px;
+    margin-bottom: 25px;
+}
+
+.guestPanelApproved div {
+    position: relative;
+}
+
+.approvedMark {
+
+}
+
+.textApproved {
+    position: absolute;
+    left: 22px;
+    width: 70px;
+    height: 23px;
+    color: #8E8E8E;
+}
