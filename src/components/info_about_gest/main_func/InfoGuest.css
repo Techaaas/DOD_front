@@ -198,6 +198,3 @@ input[type="radio"][name="statement-choice"]:checked + label[for="radio-2-statem
     cursor: pointer;
     /* Добавьте дополнительные стили по желанию */
 }
-
-
-

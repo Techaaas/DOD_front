@@ -1,7 +1,7 @@
-import "./buttonLink.css"
+import "./button_login.css"
 import {Alata} from "next/font/google";
 
-const alata = Alata({weight: '400'})
+const alata = Alata({weight: '400', subsets: ['latin']})
 const ButtonLink = () => {
   let url = "/qr";
   return (

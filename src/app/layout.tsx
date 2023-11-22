@@ -3,7 +3,7 @@ import { Alata } from 'next/font/google'
 import './globals.css'
 import {TheHeader} from "@/components/Header/TheHeader";
 
-const alata = Alata({weight: '400', style: 'normal'})
+const alata = Alata({weight: '400', subsets: ['latin']})
 
 export const metadata: Metadata = {
   title: 'Create Next App',
