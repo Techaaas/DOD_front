@@ -1,7 +1,7 @@
 'use client'
 
 import React, {useState, useEffect} from 'react';
-import './QrScan.css';
+import './qr_scan.css';
 import {Html5Qrcode} from "html5-qrcode";
 import InfoGuest from "../../components/info_about_gest/main_func/InfoGuest";
 

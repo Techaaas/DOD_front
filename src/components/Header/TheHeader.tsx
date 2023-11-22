@@ -1,7 +1,7 @@
 import './TheHeader.css'
 import {Audiowide} from "next/font/google";
 
-const audio = Audiowide({weight: '400'})
+const audio = Audiowide({weight: '400', subsets: ['latin']})
 
 const TheHeader = () => {
   return (
