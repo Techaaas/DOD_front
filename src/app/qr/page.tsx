@@ -1,39 +1,52 @@
 'use client'
 
-import React, {useState, useEffect} from 'react';
+import React, {useEffect, useState} from 'react';
 import './qr_scan.css';
 import {Html5Qrcode} from "html5-qrcode";
 import InfoGuest from "../../components/info_about_gest/main_func/InfoGuest";
 import {Alata} from "next/font/google";
+import { useDispatch, useSelector } from 'react-redux';
+import {setEnabledAction, toggleInfoGuestAction, toggleCameraAction} from '@/store/Action/actionQrPage';
 const alata = Alata({weight: '400', subsets: ['latin']})
 function QrScan() {
-  const [isEnabled, setEnabled] = useState(true);
-  // const [qrMessage, setMessage] = useState("");
-  const [showInfoGuest, setShowInfoGuest] = useState(false);
+  const dispatch = useDispatch();
+  const { isEnabled, showInfoGuest } = useSelector((state: any) => state.qrScan);
+  const [isCameraEnabled, setIsCameraEnabled] = useState(true);
   const toggleInfoGuest = () => {
-    setShowInfoGuest(!showInfoGuest);
-    setEnabled(true);
+    dispatch(toggleInfoGuestAction());
+    dispatch(setEnabledAction(true));
   };
+
+
   useEffect(() => {
     const config = {fps: 20, qrbox: {width: 200, height: 200}}
     const scanQr = new Html5Qrcode("qrCodeContainer");
 
+
+
     const qrScannerStop = () => {
       if (scanQr && scanQr.isScanning) {
-
+        console.log("Stopping QR code scanner...");
         scanQr.stop()
-            .then(() => console.log("Qr code scanned"))
-            .catch(() => console.log("Error: Qr code not scanned"))
+            .then(() => console.log("QR code scanner stopped successfully"))
+            .catch((error) => console.error("Error stopping QR code scanner:", error));
+      }
+    }
+    const qrSuccess = () => {
+      console.log("QR code scanned successfully");
+      dispatch(toggleInfoGuestAction());
+      dispatch(setEnabledAction(false));
+
+      if (isCameraEnabled) {
+        scanQr.clear(); // Очистите камеру
+        setIsCameraEnabled(false);
+        dispatch(toggleCameraAction());
+        console.log("Camera disabled");
       }
     }
 
-    const qrSuccess = () => {
-      // setMessage(decodedText);
-      setShowInfoGuest(true); // Показываем InfoGuest
-      setEnabled(false);
-    }
-
-    if (isEnabled) {
+    if (isEnabled && isCameraEnabled) {
+      dispatch(toggleCameraAction());
       scanQr.start({facingMode: "environment"}, config, qrSuccess, undefined)
     } else {
       qrScannerStop()
@@ -42,7 +55,7 @@ function QrScan() {
     return (() => {
       qrScannerStop();
     })
-  }, [isEnabled]);
+  }, [dispatch, isEnabled, isCameraEnabled]);
 
   return (
       <div className={alata.className}>

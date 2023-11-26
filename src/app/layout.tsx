@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import { Alata } from 'next/font/google'
 import './globals.css'
 import {TheHeader} from "@/components/Header/TheHeader";
+import {StoreProvider} from "@/store/Provider/StoreProvider";
 
 const alata = Alata({weight: '400', subsets: ['latin']})
 
@@ -16,9 +17,11 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en">
-    <TheHeader/>
-      <body className={alata.className}>{children}</body>
-    </html>
+      <StoreProvider>
+        <html lang="en">
+        <TheHeader/>
+        <body className={alata.className}>{children}</body>
+        </html>
+      </StoreProvider>
   )
 }

@@ -1,27 +1,3 @@
-
-.take_photo_statement {
-    color: #FFFFFF;
-    font-size: 13px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: normal;
-    border-radius: 50px;
-    padding: 4px 17px 5px 12px;
-    background: #40BA21;
-    display: flex;
-    flex-direction: row;
-    flex-group: 1;
-    justify-content: center;
-}
-
-.take_photo_statement svg {
-    margin-right: 6px;
-    width: 14px;
-    height: 14px;
-    flex-shrink: 0;
-    margin-top: 2px;
-}
-
 .buttons_statement div {
     display: inline-block;
     position: relative;

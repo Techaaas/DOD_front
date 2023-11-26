@@ -2,17 +2,20 @@
 
 import React, {FC, useCallback, useRef, useState} from 'react';
 import Webcam from "react-webcam";
-import './take_photo.css'
+import '../take_photo.css'
 import Link from "next/link";
+import {useDispatch} from "react-redux";
+import {setPassportImage} from "@/store/Slice/guestImgState";
 
 interface TakePhotoProps {
-  onFileSubmitTakePhoto?: (img: string | null) => void;
-  onFileSelectionTakePhoto?: (select: boolean) => void
+  onFileSubmitTakePhotoPass?: (img: string | null) => void;
+  onFileSelectionTakePhotoPass?: (select: boolean) => void
 }
 
-const TakePhoto: FC<TakePhotoProps> = ({onFileSubmitTakePhoto, onFileSelectionTakePhoto}) => {
-  const [img, setImg] = useState<string | null>(null);
+const TakePhotoPass: FC<TakePhotoProps> = ({onFileSubmitTakePhotoPass, onFileSelectionTakePhotoPass}) => {
+  const [imgSrc, setImgSrc] = useState<string | null>(null);
   const webcamRef = useRef<Webcam | null>(null);
+  const dispatch = useDispatch();
 
   const videoConstraints = {
     width: {min: 600},
@@ -22,26 +25,29 @@ const TakePhoto: FC<TakePhotoProps> = ({onFileSubmitTakePhoto, onFileSelectionTa
 
   const capture = useCallback(() => {
     if (webcamRef.current) {
-      const imageSrc: string | null = webcamRef.current.getScreenshot();
-      setImg(imageSrc);
+      const imageSrc = webcamRef.current.getScreenshot();
+      setImgSrc(imageSrc);
+      if (imageSrc) {
+        if (onFileSelectionTakePhotoPass) {
+          onFileSelectionTakePhotoPass(true);
+        }
+        if (onFileSubmitTakePhotoPass) {
+          onFileSubmitTakePhotoPass(imageSrc)
+        }
+      }
     }
-  }, [webcamRef]);
-
+  }, [webcamRef, dispatch, onFileSelectionTakePhotoPass]);
   const handleSubmit = () => {
-    if (onFileSubmitTakePhoto) {
-      onFileSubmitTakePhoto(img)
+    if (imgSrc){
+      console.log("imgSrc")
+      dispatch(setPassportImage(imgSrc));
     }
-    if (onFileSelectionTakePhoto) {
-      onFileSelectionTakePhoto(true)
-    }
-    console.log()
   };
-
 
   return (
       <div>
         <div className='container'>
-          {img === null ? (
+          {imgSrc === null ? (
               <div>
                 <div className='camera'>
                   <Webcam
@@ -81,8 +87,8 @@ const TakePhoto: FC<TakePhotoProps> = ({onFileSubmitTakePhoto, onFileSelectionTa
               </div>
           ) : (
               <div>
-                <img className='camera_shot' src={img} alt="screenshot"/>
-                <button className='button_retake_photo' onClick={() => setImg(null)}>
+                <img className='camera_shot' src={imgSrc} alt="screenshot"/>
+                <button className='button_retake_photo' onClick={() => setImgSrc(null)}>
                   <svg xmlns="http://www.w3.org/2000/svg" width="20" height="15" viewBox="0 0 20 15"
                        fill="none">
                     <path
@@ -91,8 +97,8 @@ const TakePhoto: FC<TakePhotoProps> = ({onFileSubmitTakePhoto, onFileSelectionTa
                   </svg>
                   Retake
                 </button>
-                <Link href={'/qr'}>
-                  <button className='button_submit_photo' onClick={handleSubmit}>Submit</button>
+                <Link href={'/qr'} onClick={handleSubmit}>
+                  <button className='button_submit_photo' >Submit</button>
                 </Link>
               </div>
           )}
@@ -101,4 +107,4 @@ const TakePhoto: FC<TakePhotoProps> = ({onFileSubmitTakePhoto, onFileSelectionTa
   );
 };
 
-export default TakePhoto;
+export default TakePhotoPass;

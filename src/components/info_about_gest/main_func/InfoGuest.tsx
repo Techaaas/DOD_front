@@ -1,59 +1,63 @@
 'use client'
 
-import React, {FC, useState} from 'react';
+import React, {FC, useEffect, useState} from 'react';
 import './InfoGuest.css'
 import ButtonStatements from "../button_statement/ButtonStatements";
 import ButtonPassport from "../button_passport/ButtonPassport";
 import axios from 'axios';
-import data from '../../../data/info_guest.json'
 import {Alata} from "next/font/google";
-
+import {useDispatch, useSelector} from "react-redux";
+import {RootState, AppDispatch} from "@/store/store";
+import {setStatementSelection, setPassportSelection, setName, setSurname} from '@/store/Slice/guestInfoPageState';
+import {setStatementImage} from "@/store/Slice/guestImgState";
 interface InfoGuestProps {
   onClose: () => void;
 }
 const alata = Alata({weight: '400', subsets: ['latin']})
 const InfoGuest: FC<InfoGuestProps> = ({onClose}) => {
 
-  const [isStatementSelected, setIsStatementSelected] = useState(() => false);
-  const [isPassportSelected, setIsPassportSelected] = useState(() => false);
   const [isButtonStatementVisible, setIsButtonStatementVisible] = useState(false);
   const [isButtonPassportVisible, setIsButtonPassportVisible] = useState(false);
   const [isStatementFileSelected, setIsStatementFileSelected] = useState(false);
+  const [isImgSelectionStatement, setIsImgSelectionStatement] = useState(false)
   const [isPassportFileSelected, setIsPassportFileSelected] = useState(false);
-  const [editableName, setEditableName] = useState(data.name);
-  const [editableSurname, setEditableSurname] = useState(data.surname);
-  const [tempName, setTempName] = useState(editableName);
-  const [tempSurname, setTempSurname] = useState(editableSurname);
+  const dispatch = useDispatch<AppDispatch>();
+  const { isStatementSelected, isPassportSelected, name, surname } = useSelector((state: RootState) => state.infoGuest);
+  const [tempName, setTempName] = useState(name);
+  const [tempSurname, setTempSurname] = useState(surname);
+
+  useEffect(() => {
+    setIsButtonStatementVisible(isStatementSelected);
+    setIsButtonPassportVisible(isPassportSelected);
+  }, [isStatementSelected, isPassportSelected]);
 
 
-  const handleConfirmChanges = () => {
-    console.log('File submitted');
-    setEditableName(tempName);
-    setEditableSurname(tempSurname);
-    console.log(tempName)
-    const updatedData = {
-      name: tempName,
-      surname: tempSurname
-    };
-    axios.post('https://your-server.com/update', updatedData)
-        .then(response => {
-          // Обработка успешного ответа
-          console.log('Data updated successfully', response);
-        })
-        .catch(error => {
-          // Обработка ошибки
-          console.error('Error updating data', error);
-        });
+  useEffect(() => {
+    // Обновление состояния Redux данными из JSON при монтировании компонента
+    const savedName = localStorage.getItem(name);
+    const savedSurname = localStorage.getItem(surname);
+    if (savedName) setTempName(savedName);
+    if (savedSurname) setTempSurname(savedSurname);
+  }, []);
+
+  const handleNameChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setTempName(e.target.value);
+    localStorage.setItem(name, e.target.value);
+  };
+
+  const handleSurnameChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setTempSurname(e.target.value);
+    localStorage.setItem(surname, e.target.value);
   };
 
   const handleStatementSelection = (selected: boolean) => {
-    setIsStatementSelected(selected);
-    setIsButtonStatementVisible(selected); // Установите видимость кнопок
+    dispatch(setStatementSelection(selected));
+    setIsButtonStatementVisible(selected);
   };
 
   const handlePassportSelection = (selected: boolean) => {
-    setIsPassportSelected(selected);
-    setIsButtonPassportVisible(selected); // Установите видимость кнопок
+    dispatch(setPassportSelection(selected));
+    setIsButtonPassportVisible(selected);
   };
   const handleStatementFileSelect = (selected: boolean) => {
     setIsStatementFileSelected(selected);
@@ -61,6 +65,35 @@ const InfoGuest: FC<InfoGuestProps> = ({onClose}) => {
 
   const handlePassportFileSelect = (selected: boolean) => {
     setIsPassportFileSelected(selected);
+  };
+
+  const handleImgSelected = (selected: boolean) => {
+    dispatch(setStatementImage(null));
+    setIsImgSelectionStatement(selected);
+  };
+
+  const handleConfirmChanges = () => {
+    // Обновление глобального состояния Redux
+    dispatch(setName(tempName));
+    dispatch(setSurname(tempSurname));
+
+    // Отправка данных на сервер
+    const updatedData = {
+      name: tempName,
+      surname: tempSurname
+    };
+
+    axios.post('https://your-server.com/update', updatedData)
+        .then(response => {
+          console.log('Data updated successfully', response);
+        })
+        .catch(error => {
+          console.error('Error updating data', error);
+        });
+
+    // Очистка localStorage после подтверждения
+    localStorage.removeItem(name);
+    localStorage.removeItem(surname);
   };
 
 
@@ -79,7 +112,7 @@ const InfoGuest: FC<InfoGuestProps> = ({onClose}) => {
                 <input className='info_guest-name-content'
                        type="text"
                        value={tempName}
-                       onChange={(e) => setTempName(e.target.value)}
+                       onChange={handleNameChange}
                 />
               </section>
               <section className='info_guest-surname'>
@@ -87,7 +120,7 @@ const InfoGuest: FC<InfoGuestProps> = ({onClose}) => {
                 <input className='info_guest-surname-content'
                        type="text"
                        value={tempSurname}
-                       onChange={(e) => setTempSurname(e.target.value)}
+                       onChange={handleSurnameChange}
                 />
               </section>
               <section className='info_guest-statement'>
@@ -115,14 +148,14 @@ const InfoGuest: FC<InfoGuestProps> = ({onClose}) => {
                           name='statement-choice'
                           checked={isStatementSelected}
                           onChange={() => handleStatementSelection(true)}
-                          disabled={isStatementFileSelected}
+                          disabled={isStatementFileSelected || isImgSelectionStatement}
                       />
                       <label htmlFor='radio-2-statement'>No</label>
                     </div>
                   </div>
                   {/*Создание фото или загрузка его на сайт*/}
                   <div className={`upload_take_photo slide-in-out ${isButtonStatementVisible ? 'show' : ''}`}>
-                    <ButtonStatements onFileSubmitStatement={handleConfirmChanges}
+                    <ButtonStatements onImgSelectionStatement={handleImgSelected} onFileSubmitStatement={handleConfirmChanges}
                                       onFileSelectionStatement={handleStatementFileSelect}/>
                   </div>
                 </div>
