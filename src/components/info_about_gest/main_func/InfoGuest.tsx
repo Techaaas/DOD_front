@@ -9,17 +9,20 @@ import {Alata} from "next/font/google";
 import {useDispatch, useSelector} from "react-redux";
 import {RootState, AppDispatch} from "@/store/store";
 import {setStatementSelection, setPassportSelection, setName, setSurname} from '@/store/Slice/guestInfoPageState';
-import {setStatementImage} from "@/store/Slice/guestImgState";
+import {setPassportImage, setStatementImage} from "@/store/Slice/guestImgState";
 interface InfoGuestProps {
   onClose: () => void;
 }
+
 const alata = Alata({weight: '400', subsets: ['latin']})
+
 const InfoGuest: FC<InfoGuestProps> = ({onClose}) => {
 
   const [isButtonStatementVisible, setIsButtonStatementVisible] = useState(false);
   const [isButtonPassportVisible, setIsButtonPassportVisible] = useState(false);
   const [isStatementFileSelected, setIsStatementFileSelected] = useState(false);
   const [isImgSelectionStatement, setIsImgSelectionStatement] = useState(false)
+  const [isImgPassportStatement, setIsImgPassportStatement] = useState(false)
   const [isPassportFileSelected, setIsPassportFileSelected] = useState(false);
   const dispatch = useDispatch<AppDispatch>();
   const { isStatementSelected, isPassportSelected, name, surname } = useSelector((state: RootState) => state.infoGuest);
@@ -67,9 +70,16 @@ const InfoGuest: FC<InfoGuestProps> = ({onClose}) => {
     setIsPassportFileSelected(selected);
   };
 
-  const handleImgSelected = (selected: boolean) => {
+  const handleStatementImgSelected = (selected: boolean) => {
     dispatch(setStatementImage(null));
+    handleStatementFileSelect(false)
     setIsImgSelectionStatement(selected);
+  };
+
+  const handlePassportImgSelected = (selected: boolean) => {
+    dispatch(setPassportImage(null));
+    handlePassportFileSelect(false)
+    setIsImgPassportStatement(selected);
   };
 
   const handleConfirmChanges = () => {
@@ -136,7 +146,7 @@ const InfoGuest: FC<InfoGuestProps> = ({onClose}) => {
                           name='statement-choice'
                           checked={!isStatementSelected}
                           onChange={() => handleStatementSelection(false)}
-                          disabled={isStatementFileSelected}
+                          disabled={isStatementFileSelected || isImgSelectionStatement}
                       />
                       <label htmlFor='radio-1-statement'>Yes</label>
                     </div>
@@ -148,14 +158,15 @@ const InfoGuest: FC<InfoGuestProps> = ({onClose}) => {
                           name='statement-choice'
                           checked={isStatementSelected}
                           onChange={() => handleStatementSelection(true)}
-                          disabled={isStatementFileSelected || isImgSelectionStatement}
+                          disabled={isStatementFileSelected && isImgSelectionStatement}
                       />
                       <label htmlFor='radio-2-statement'>No</label>
                     </div>
                   </div>
                   {/*Создание фото или загрузка его на сайт*/}
                   <div className={`upload_take_photo slide-in-out ${isButtonStatementVisible ? 'show' : ''}`}>
-                    <ButtonStatements onImgSelectionStatement={handleImgSelected} onFileSubmitStatement={handleConfirmChanges}
+                    <ButtonStatements onImgSelectionStatement={handleStatementImgSelected}
+                                      onFileSubmitStatement={handleConfirmChanges}
                                       onFileSelectionStatement={handleStatementFileSelect}/>
                   </div>
                 </div>
@@ -172,7 +183,7 @@ const InfoGuest: FC<InfoGuestProps> = ({onClose}) => {
                           name='passport-choice'
                           checked={!isPassportSelected}
                           onChange={() => handlePassportSelection(false)}
-                          disabled={isPassportFileSelected}
+                          disabled={isPassportFileSelected || isImgPassportStatement}
                       />
                       <label htmlFor='radio-1-passport'>Yes</label>
                     </div>
@@ -184,13 +195,14 @@ const InfoGuest: FC<InfoGuestProps> = ({onClose}) => {
                           name='passport-choice'
                           checked={isPassportSelected}
                           onChange={() => handlePassportSelection(true)}
-                          disabled={isPassportFileSelected}
+                          disabled={isPassportFileSelected && isImgPassportStatement}
                       />
                       <label htmlFor='radio-2-passport'>No</label>
                     </div>
                   </div>
                   <div className={`upload_take_photo slide-in-out ${isButtonPassportVisible ? 'show' : ''}`}>
-                    <ButtonPassport onFileSubmitPassport={handleConfirmChanges}
+                    <ButtonPassport onImgSelectionStatement={handlePassportImgSelected}
+                                    onFileSubmitPassport={handleConfirmChanges}
                                     onFileSelectionPassport={handlePassportFileSelect}/>
                   </div>
                 </div>

@@ -19,7 +19,6 @@ const FileUploader: React.FC<FileUploaderProps> = ({type, onFileRemove, onFileSe
   const [selectedFile, setSelectedFile] = useState<File | null>(null);
 
   useEffect(() => {
-    // Установка файла в зависимости от типа при монтировании компонента
     if (type === 'statement' && statementFile) {
       setSelectedFile(statementFile);
     } else if (type === 'passport' && passportFile) {

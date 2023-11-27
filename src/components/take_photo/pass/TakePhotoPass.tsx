@@ -37,6 +37,7 @@ const TakePhotoPass: FC<TakePhotoProps> = ({onFileSubmitTakePhotoPass, onFileSel
       }
     }
   }, [webcamRef, dispatch, onFileSelectionTakePhotoPass]);
+
   const handleSubmit = () => {
     if (imgSrc){
       console.log("imgSrc")
@@ -45,7 +46,7 @@ const TakePhotoPass: FC<TakePhotoProps> = ({onFileSubmitTakePhotoPass, onFileSel
   };
 
   return (
-      <div>
+      <div className='back'>
         <div className='container'>
           {imgSrc === null ? (
               <div>
@@ -80,10 +81,12 @@ const TakePhotoPass: FC<TakePhotoProps> = ({onFileSubmitTakePhotoPass, onFileSel
                     </defs>
                   </svg>
                 </button>
-                <button className='button_close'>
-                  {/* Добавьте кнопку закрытия */}
-                  Close
-                </button>
+                <Link href={'/qr'}>
+                  <button className='button_close'>
+                    {/* Добавьте кнопку закрытия */}
+                    Close
+                  </button>
+                </Link>
               </div>
           ) : (
               <div>

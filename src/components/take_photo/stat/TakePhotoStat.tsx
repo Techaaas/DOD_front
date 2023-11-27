@@ -37,6 +37,7 @@ const TakePhotoStat: FC<TakePhotoProps> = ({onFileSubmitTakePhoto, onFileSelecti
       }
     }
   }, [webcamRef, dispatch, onFileSelectionTakePhoto]);
+
   const handleSubmit = () => {
     if (imgSrcStat){
       console.log("ddd")
@@ -80,10 +81,12 @@ const TakePhotoStat: FC<TakePhotoProps> = ({onFileSubmitTakePhoto, onFileSelecti
                     </defs>
                   </svg>
                 </button>
-                <button className='button_close'>
-                  {/* Добавьте кнопку закрытия */}
-                  Close
-                </button>
+                <Link href={'/qr'}>
+                  <button className='button_close'>
+                    {/* Добавьте кнопку закрытия */}
+                    Close
+                  </button>
+                </Link>
               </div>
           ) : (
               <div>

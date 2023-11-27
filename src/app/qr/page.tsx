@@ -8,6 +8,8 @@ import {Alata} from "next/font/google";
 import { useDispatch, useSelector } from 'react-redux';
 import {setEnabledAction, toggleInfoGuestAction, toggleCameraAction} from '@/store/Action/actionQrPage';
 const alata = Alata({weight: '400', subsets: ['latin']})
+
+
 function QrScan() {
   const dispatch = useDispatch();
   const { isEnabled, showInfoGuest } = useSelector((state: any) => state.qrScan);
@@ -21,8 +23,6 @@ function QrScan() {
   useEffect(() => {
     const config = {fps: 20, qrbox: {width: 200, height: 200}}
     const scanQr = new Html5Qrcode("qrCodeContainer");
-
-
 
     const qrScannerStop = () => {
       if (scanQr && scanQr.isScanning) {

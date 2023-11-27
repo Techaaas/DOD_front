@@ -33,9 +33,10 @@ const ButtonPassportTakePhoto: React.FC<ButtonTakePhotoProps> = ({onSelected, ty
   const handleFileRemove = () => {
     setImageData(null);
     onFileRemoved();
-    onSelected(true)
+    onSelected(false)
     dispatch(setPassportImage(null));
   };
+
 
   return (
       <div>

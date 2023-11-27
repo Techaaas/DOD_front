@@ -6,13 +6,15 @@ import {RootState} from "@/store/store";
 import {setPassportFile, setStatementFile} from "@/store/Slice/guestFileState";
 import ButtonPassportTakePhoto from "@/components/info_about_gest/button_passport_take_photo/ButtonPassportTakePhoto";
 
+
 type ButtonPassportProps = {
   onFileSubmitPassport: () => void;
   onFileSelectionPassport: (select: boolean) => void
+  onImgSelectionStatement: (select: boolean) => void;
 };
 
 
-const ButtonPassport: React.FC<ButtonPassportProps> = ({onFileSubmitPassport, onFileSelectionPassport}) => {
+const ButtonPassport: React.FC<ButtonPassportProps> = ({onImgSelectionStatement, onFileSubmitPassport, onFileSelectionPassport}) => {
 
   const dispatch = useDispatch();
   const selectedFile = useSelector((state: RootState) => state.file.passportFile);
@@ -44,12 +46,14 @@ const ButtonPassport: React.FC<ButtonPassportProps> = ({onFileSubmitPassport, on
     setShowUpload(true);
     setShowTakePhoto(true);
   }
+
   const handleFileSelected = () => {
     setShowTakePhoto(false);
-    onFileSelectionPassport(true); // или setShowUpload(false), в зависимости от того, какая кнопка должна скрываться
+    onFileSelectionPassport(true);
   };
+
   const handleFileRemoved = () => {
-    dispatch(setPassportFile(null)); // Очистите состояние файла в Redux
+    dispatch(setPassportFile(null));
     setShowUpload(true);
     setShowTakePhoto(true);
     setTimeout(() => {
@@ -68,14 +72,20 @@ const ButtonPassport: React.FC<ButtonPassportProps> = ({onFileSubmitPassport, on
       <div className='buttons_passport'>
         {showUploadPassport && (
             <div>
-              <FileUploader type="passport" onSubmit={onFileSubmitPassport} onFileRemove={handleFileRemoved}
-                            onFileSelected={handleFileSelected} onSelected={onFileSelectionPassport}/>
+              <FileUploader type="passport"
+                            onSubmit={onFileSubmitPassport}
+                            onFileRemove={handleFileRemoved}
+                            onFileSelected={handleFileSelected}
+                            onSelected={onFileSelectionPassport}/>
             </div>
         )}
         {showTakePhotoPassport && (
             <div>
               <button>
-                <ButtonPassportTakePhoto onSelected={onFileSelectionPassport} type='statement' onFileReceived={handleTakePhoto} onFileRemoved={handleTakePhotoRemoved}/>
+                <ButtonPassportTakePhoto onSelected={onImgSelectionStatement}
+                                         type='statement'
+                                         onFileReceived={handleTakePhoto}
+                                         onFileRemoved={handleTakePhotoRemoved}/>
               </button>
             </div>
         )}

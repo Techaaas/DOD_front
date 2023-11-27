@@ -53,6 +53,7 @@ const ButtonStatements: React.FC<ButtonStatementsProps> = ({onFileSubmitStatemen
     setShowUpload(true);
     setShowTakePhoto(true);
   }
+
   const handleFileSelected = () => {
     setShowTakePhoto(false);
     onFileSelectionStatement(true);
@@ -62,6 +63,7 @@ const ButtonStatements: React.FC<ButtonStatementsProps> = ({onFileSubmitStatemen
     setShowUpload(false)
     onFileSelectionStatement(true)
   }
+
 
   return (
       <div>
@@ -77,7 +79,10 @@ const ButtonStatements: React.FC<ButtonStatementsProps> = ({onFileSubmitStatemen
           {showTakePhotoStatement && (
               <div>
                 <button>
-                  <ButtonStatementsTakePhoto onSelected={onImgSelectionStatement} type='statement' onFileReceived={handleTakePhoto} onFileRemoved={handleTakePhotoRemoved}/>
+                  <ButtonStatementsTakePhoto onSelected={onImgSelectionStatement}
+                                             type='statement'
+                                             onFileReceived={handleTakePhoto}
+                                             onFileRemoved={handleTakePhotoRemoved}/>
                 </button>
               </div>
           )}
