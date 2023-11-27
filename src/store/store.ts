@@ -11,7 +11,7 @@ const store = configureStore({
     qrScan: qrScanReducer,
     infoGuest: infoGuestReducer,
     file: FileReducer,
-    image: imageReducer
+    image: imageReducer,
   },
 });
 

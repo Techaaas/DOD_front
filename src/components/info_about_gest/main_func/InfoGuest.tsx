@@ -24,16 +24,29 @@ const InfoGuest: FC<InfoGuestProps> = ({onClose}) => {
   const [isImgSelectionStatement, setIsImgSelectionStatement] = useState(false)
   const [isImgPassportStatement, setIsImgPassportStatement] = useState(false)
   const [isPassportFileSelected, setIsPassportFileSelected] = useState(false);
+  const [showModal, setShowModal] = useState(false);
+
   const dispatch = useDispatch<AppDispatch>();
   const { isStatementSelected, isPassportSelected, name, surname } = useSelector((state: RootState) => state.infoGuest);
   const [tempName, setTempName] = useState(name);
   const [tempSurname, setTempSurname] = useState(surname);
+  let timer:any;
+
 
   useEffect(() => {
     setIsButtonStatementVisible(isStatementSelected);
     setIsButtonPassportVisible(isPassportSelected);
   }, [isStatementSelected, isPassportSelected]);
 
+  useEffect(() => {
+    if (showModal) {
+      timer = setTimeout(() => {
+        setShowModal(false)
+        onClose()
+      }, 10000); // Закрыть через 3 секунды
+      return () => clearTimeout(timer);
+    }
+  }, [showModal, onClose]);
 
   useEffect(() => {
     // Обновление состояния Redux данными из JSON при монтировании компонента
@@ -86,6 +99,7 @@ const InfoGuest: FC<InfoGuestProps> = ({onClose}) => {
     // Обновление глобального состояния Redux
     dispatch(setName(tempName));
     dispatch(setSurname(tempSurname));
+    setShowModal(true);
 
     // Отправка данных на сервер
     const updatedData = {
@@ -105,7 +119,11 @@ const InfoGuest: FC<InfoGuestProps> = ({onClose}) => {
     localStorage.removeItem(name);
     localStorage.removeItem(surname);
   };
-
+  const closeModal = () => {
+    setShowModal(false);
+    onClose()
+    clearTimeout(timer); // Очистка таймера при ручном закрытии
+  };
 
   return (
       <div className={alata.className}>
@@ -208,7 +226,19 @@ const InfoGuest: FC<InfoGuestProps> = ({onClose}) => {
                 </div>
               </section>
               {/*Кнопка подтверждения*/}
-              <button className='button_submit' onClick={handleConfirmChanges}>Submit</button>
+              <button className='button_submit' onClick={handleConfirmChanges}>
+                Submit
+              </button>
+              {showModal && (
+                  <div className="modal">
+                    <div className="modal-content">
+                      <div>
+                        <button className="close" onClick={closeModal}>&times;</button>
+                      </div>
+                      <div className='text-modal'>Data saved successfully</div>
+                    </div>
+                  </div>
+              )}
             </div>
           </div>
         </div>

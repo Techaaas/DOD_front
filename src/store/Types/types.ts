@@ -5,10 +5,6 @@ export interface QrScanState {
   isCameraEnabled: boolean
 }
 
-export interface FileState {
-  file: File | null;
-}
-
 export interface InfoGuestState {
   isStatementSelected: boolean;
   isPassportSelected: boolean;
