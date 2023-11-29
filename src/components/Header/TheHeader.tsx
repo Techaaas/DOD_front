@@ -1,12 +1,15 @@
 import './TheHeader.css'
 import {Audiowide} from "next/font/google";
+import Link from "next/link";
 
 const audio = Audiowide({weight: '400', subsets: ['latin']})
 
 const TheHeader = () => {
   return (
         <header>
-          <div className={audio.className}>DOD</div>
+          <Link href={'/qr'}>
+            <button className={audio.className}>DOD</button>
+          </Link>
         </header>
   );
 };
