@@ -16,3 +16,66 @@ header button {
     left: 23px;
     top: 3px;
 }
+
+.user-dropdown {
+    position: relative;
+    top: -12px;
+    left: 96%;
+}
+
+.user-dropdown button {
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.user-dropdown button img {
+    width: 29px;
+    height: 29px;
+}
+
+.dropdown-content {
+    position: relative;
+    top: 46px;
+    right: 96% ;
+    background-color: #40BA21;
+    min-width: 160px;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+
+.user-dropdown.active .dropdown-content {
+    display: block;
+}
+
+.dropdown-content p {
+    display: block;
+    padding: 10px;
+    margin: 0;
+    color: #FFFFFF;
+    background-color: #40BA21;
+}
+
+.dropdown-links {
+    display: flex;
+    flex-direction: column; /* Располагаем элементы в колонку */
+}
+
+.dropdown-links a {
+    display: block;
+    padding: 10px;
+    color: #FFFFFF;
+    text-decoration: none;
+}
+
+.center-email {
+    text-align: center;
+    font-size: 18px;
+}
+.log_out{
+    background-color: #E54600;
+}
+.dropdown-links a span{
+    font-size: 18px;
+}
