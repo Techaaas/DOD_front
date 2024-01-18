@@ -19,8 +19,8 @@ header button {
 
 .user-dropdown {
     position: relative;
-    top: -12px;
-    left: 96%;
+    top: 20%;
+    left: 80%;
 }
 
 .user-dropdown button {
@@ -37,7 +37,7 @@ header button {
 .dropdown-content {
     position: relative;
     top: 46px;
-    right: 96% ;
+    right: 80% ;
     background-color: #40BA21;
     min-width: 160px;
     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
