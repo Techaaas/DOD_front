@@ -2,18 +2,26 @@
 import './TheHeader.css';
 import { Audiowide } from "next/font/google";
 import Link from "next/link";
-import { useState } from 'react';
+import React, { useState } from 'react';
 import userData from '@/data/info_user.json'; // Путь к вашему JSON-файлу
 
 const audio = Audiowide({ weight: '400', subsets: ['latin'] });
 
+
 const TheHeader = () => {
   const [dropdownVisible, setDropdownVisible] = useState(false);
-
+  const isAuthPage = typeof window !== 'undefined' && window.location.pathname === '/auth';
   const handleDropdown = () => {
     setDropdownVisible(!dropdownVisible);
   };
 
+  if (isAuthPage) return (
+      <header>
+        <Link href={'/qr'}>
+          <button className={audio.className}>DOD</button>
+        </Link>
+      </header>
+  );
   return (
       <header>
         <Link href={'/qr'}>
