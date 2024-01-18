@@ -227,3 +227,59 @@ input[type="radio"][name="statement-choice"]:checked + label[for="radio-2-statem
     color: #E54600;
     font-size: 28px;
 }
+
+.checkbox-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+    font-family: Arial, sans-serif; /* Используйте нужный шрифт */
+    font-size: 18px; /* Или другой размер шрифта, который вы предпочитаете */
+}
+
+.checkbox-wrapper input[type="checkbox"] {
+    opacity: 0;
+    position: absolute;
+    margin-right: 15px; /* Расстояние от чекбокса до текста */
+}
+
+.checkbox-wrapper label {
+    cursor: pointer;
+    padding-left: 30px; /* Расстояние для фиктивного чекбокса */
+}
+
+.checkbox-wrapper label::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 21px; /* Размер фиктивного чекбокса */
+    height: 21px;
+    background-color: #fff;
+    border: 2px solid #ccc; /* Цвет границы */
+    border-radius: 7px; /* Скругление углов */
+}
+
+.checkbox-wrapper input[type="checkbox"]:checked + label::before {
+    border-color: #4cd137; /* Цвет границы при выборе */
+}
+
+.checkbox-wrapper label::after {
+    content: '';
+    position: absolute;
+    left: 9px;
+    top: 12%;
+    transform: rotate(45deg);
+    height: 16px; /* Длина первой линии галочки */
+    width: 7px; /* Длина второй линии галочки */
+    border-bottom: 2px solid transparent; /* Цвет галочки */
+    border-right: 2px solid transparent;
+    opacity: 0;
+}
+
+.checkbox-wrapper input[type="checkbox"]:checked + label::after {
+    opacity: 1;
+    border-bottom: 2px solid #4cd137; /* Цвет галочки */
+    border-right: 2px solid #4cd137;
+}
+

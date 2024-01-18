@@ -7,6 +7,7 @@ const initialState: InfoGuestState = {
   isPassportSelected: false,
   name: data.name,
   surname: data.surname,
+  isAbsent: false,
 };
 
 export const infoGuestSlice = createSlice({
@@ -25,9 +26,12 @@ export const infoGuestSlice = createSlice({
     setSurname: (state, action: PayloadAction<string>) => {
       state.surname = action.payload;
     },
+    setIsAbsent: (state, action: PayloadAction<boolean>) => {
+      state.isAbsent = action.payload;
+    },
   },
 });
 
-export const { setStatementSelection, setPassportSelection, setName, setSurname } = infoGuestSlice.actions;
+export const { setStatementSelection, setPassportSelection, setName, setSurname, setIsAbsent } = infoGuestSlice.actions;
 
 export default infoGuestSlice.reducer;

@@ -10,4 +10,5 @@ export interface InfoGuestState {
   isPassportSelected: boolean;
   name: string;
   surname: string;
+  isAbsent: boolean;
 }

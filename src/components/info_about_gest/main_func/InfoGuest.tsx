@@ -8,7 +8,7 @@ import axios from 'axios';
 import {Alata} from "next/font/google";
 import {useDispatch, useSelector} from "react-redux";
 import {RootState, AppDispatch} from "@/store/store";
-import {setStatementSelection, setPassportSelection, setName, setSurname} from '@/store/Slice/guestInfoPageState';
+import {setStatementSelection, setPassportSelection, setName, setSurname, setIsAbsent} from '@/store/Slice/guestInfoPageState';
 import {setPassportImage, setStatementImage} from "@/store/Slice/guestImgState";
 interface InfoGuestProps {
   onClose: () => void;
@@ -27,7 +27,7 @@ const InfoGuest: FC<InfoGuestProps> = ({onClose}) => {
   const [showModal, setShowModal] = useState(false);
 
   const dispatch = useDispatch<AppDispatch>();
-  const { isStatementSelected, isPassportSelected, name, surname } = useSelector((state: RootState) => state.infoGuest);
+  const { isStatementSelected, isPassportSelected, name, surname, isAbsent } = useSelector((state: RootState) => state.infoGuest);
   const [tempName, setTempName] = useState(name);
   const [tempSurname, setTempSurname] = useState(surname);
   let timer:any;
@@ -55,6 +55,16 @@ const InfoGuest: FC<InfoGuestProps> = ({onClose}) => {
     if (savedName) setTempName(savedName);
     if (savedSurname) setTempSurname(savedSurname);
   }, []);
+
+  const handlePersonPresenceChange = () => {
+    dispatch(setIsAbsent(!isAbsent)); // Переключаем состояние
+    if (isAbsent) {
+      // Сбросить выбор документов, если человек будет отмечен как отсутствующий
+      dispatch(setStatementSelection(false));
+      dispatch(setPassportSelection(false));
+    }
+  };
+
 
   const handleNameChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setTempName(e.target.value);
@@ -151,80 +161,92 @@ const InfoGuest: FC<InfoGuestProps> = ({onClose}) => {
                        onChange={handleSurnameChange}
                 />
               </section>
-              <section className='info_guest-statement'>
-                <div className='info_guest-statement-title'>Copy of statement <span>*</span></div>
-                <div className='info_guest-statement-content'>
-                  {/*Галочка для выбора между тем есть ли у посетителя копия документа или нет*/}
-                  <div className='Yes_No'>
-                    <div>
-                      <input
-                          type="radio"
-                          className='radio'
-                          id='radio-1-statement'
-                          name='statement-choice'
-                          checked={!isStatementSelected}
-                          onChange={() => handleStatementSelection(false)}
-                          disabled={isStatementFileSelected || isImgSelectionStatement}
-                      />
-                      <label htmlFor='radio-1-statement'>Yes</label>
-                    </div>
-                    <div>
-                      <input
-                          type="radio"
-                          className='radio'
-                          id='radio-2-statement'
-                          name='statement-choice'
-                          checked={isStatementSelected}
-                          onChange={() => handleStatementSelection(true)}
-                          disabled={isStatementFileSelected && isImgSelectionStatement}
-                      />
-                      <label htmlFor='radio-2-statement'>No</label>
-                    </div>
-                  </div>
-                  {/*Создание фото или загрузка его на сайт*/}
-                  <div className={`upload_take_photo slide-in-out ${isButtonStatementVisible ? 'show' : ''}`}>
-                    <ButtonStatements onImgSelectionStatement={handleStatementImgSelected}
-                                      onFileSubmitStatement={handleConfirmChanges}
-                                      onFileSelectionStatement={handleStatementFileSelect}/>
-                  </div>
-                </div>
+              <section className="checkbox-wrapper">
+                <input type="checkbox"
+                       id="checkbox"
+                       checked={isAbsent}
+                       onChange={handlePersonPresenceChange}
+                />
+                <label className="lbl" htmlFor="checkbox" >Is absent</label>
               </section>
-              <section className='info_guest-passport'>
-                <div className='info_guest-passport-title'>Copy of passport <span>*</span></div>
-                <div className='info_guest-passport-content'>
-                  <div className='Yes_No'>
-                    <div>
-                      <input
-                          type="radio"
-                          className='radio_button'
-                          id='radio-1-passport'
-                          name='passport-choice'
-                          checked={!isPassportSelected}
-                          onChange={() => handlePassportSelection(false)}
-                          disabled={isPassportFileSelected || isImgPassportStatement}
-                      />
-                      <label htmlFor='radio-1-passport'>Yes</label>
+              {!isAbsent && (
+              <div>
+                <section className='info_guest-statement'>
+                  <div className='info_guest-statement-title'>Copy of statement <span>*</span></div>
+                  <div className='info_guest-statement-content'>
+                    {/*Галочка для выбора между тем есть ли у посетителя копия документа или нет*/}
+                    <div className='Yes_No'>
+                      <div>
+                        <input
+                            type="radio"
+                            className='radio'
+                            id='radio-1-statement'
+                            name='statement-choice'
+                            checked={!isStatementSelected}
+                            onChange={() => handleStatementSelection(false)}
+                            disabled={isStatementFileSelected || isImgSelectionStatement}
+                        />
+                        <label htmlFor='radio-1-statement'>Yes</label>
+                      </div>
+                      <div>
+                        <input
+                            type="radio"
+                            className='radio'
+                            id='radio-2-statement'
+                            name='statement-choice'
+                            checked={isStatementSelected}
+                            onChange={() => handleStatementSelection(true)}
+                            disabled={isStatementFileSelected && isImgSelectionStatement}
+                        />
+                        <label htmlFor='radio-2-statement'>No</label>
+                      </div>
                     </div>
-                    <div>
-                      <input
-                          type="radio"
-                          className='radio_button'
-                          id='radio-2-passport'
-                          name='passport-choice'
-                          checked={isPassportSelected}
-                          onChange={() => handlePassportSelection(true)}
-                          disabled={isPassportFileSelected && isImgPassportStatement}
-                      />
-                      <label htmlFor='radio-2-passport'>No</label>
+                    {/*Создание фото или загрузка его на сайт*/}
+                    <div className={`upload_take_photo slide-in-out ${isButtonStatementVisible ? 'show' : ''}`}>
+                      <ButtonStatements onImgSelectionStatement={handleStatementImgSelected}
+                                        onFileSubmitStatement={handleConfirmChanges}
+                                        onFileSelectionStatement={handleStatementFileSelect}/>
                     </div>
                   </div>
-                  <div className={`upload_take_photo slide-in-out ${isButtonPassportVisible ? 'show' : ''}`}>
-                    <ButtonPassport onImgSelectionStatement={handlePassportImgSelected}
-                                    onFileSubmitPassport={handleConfirmChanges}
-                                    onFileSelectionPassport={handlePassportFileSelect}/>
+                </section>
+                <section className='info_guest-passport'>
+                  <div className='info_guest-passport-title'>Copy of passport <span>*</span></div>
+                  <div className='info_guest-passport-content'>
+                    <div className='Yes_No'>
+                      <div>
+                        <input
+                            type="radio"
+                            className='radio_button'
+                            id='radio-1-passport'
+                            name='passport-choice'
+                            checked={!isPassportSelected}
+                            onChange={() => handlePassportSelection(false)}
+                            disabled={isPassportFileSelected || isImgPassportStatement}
+                        />
+                        <label htmlFor='radio-1-passport'>Yes</label>
+                      </div>
+                      <div>
+                        <input
+                            type="radio"
+                            className='radio_button'
+                            id='radio-2-passport'
+                            name='passport-choice'
+                            checked={isPassportSelected}
+                            onChange={() => handlePassportSelection(true)}
+                            disabled={isPassportFileSelected && isImgPassportStatement}
+                        />
+                        <label htmlFor='radio-2-passport'>No</label>
+                      </div>
+                    </div>
+                    <div className={`upload_take_photo slide-in-out ${isButtonPassportVisible ? 'show' : ''}`}>
+                      <ButtonPassport onImgSelectionStatement={handlePassportImgSelected}
+                                      onFileSubmitPassport={handleConfirmChanges}
+                                      onFileSelectionPassport={handlePassportFileSelect}/>
+                    </div>
                   </div>
-                </div>
-              </section>
+                </section>
+              </div>
+              )}
               {/*Кнопка подтверждения*/}
               <button className='button_submit' onClick={handleConfirmChanges}>
                 Submit

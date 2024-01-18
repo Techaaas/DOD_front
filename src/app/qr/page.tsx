@@ -71,6 +71,9 @@ function QrScan() {
             </div>
         )}
       </div>
+      // <>
+      //   <InfoGuest onClose={toggleInfoGuest}></InfoGuest>
+      // </>
   );
 
 }
