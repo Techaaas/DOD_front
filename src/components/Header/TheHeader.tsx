@@ -10,23 +10,17 @@ const audio = Audiowide({ weight: '400', subsets: ['latin'] });
 
 const TheHeader = () => {
   const [dropdownVisible, setDropdownVisible] = useState(false);
-  const isAuthPage = typeof window !== 'undefined' && window.location.pathname === '/auth';
 
   const handleDropdown = () => {
     setDropdownVisible(!dropdownVisible);
   };
 
 
-  const handleLogout = () => {
-    setDropdownVisible(false);
-  };
-
   return (
       <header>
-        <Link href={'/qr'}>
-          <button className={audio.className}>DOD</button>
+        <Link className={audio.className} href={'/qr'}>
+            <button className="dod" id="dod">DOD</button>
         </Link>
-        {!isAuthPage && (
           <div className={`user-dropdown ${dropdownVisible ? 'active' : ''}`}>
             <button onClick={handleDropdown}>
               <svg xmlns="http://www.w3.org/2000/svg" width="29" height="29" viewBox="0 0 29 29" fill="none">
@@ -44,7 +38,7 @@ const TheHeader = () => {
                         Guest list
                       </span>
                     </Link>
-                    <Link className='log_out' href={"/auth"} onClick={handleLogout}>
+                    <Link className='log_out' href={"/auth"}>
                       <span>
                         Log out
                       </span>
@@ -53,7 +47,6 @@ const TheHeader = () => {
                 </div>
             )}
           </div>
-            )}
       </header>
   );
 };
