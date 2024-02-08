@@ -1,10 +1,10 @@
 import React, {useEffect, useState} from 'react';
-import FileUploader from '../file_uploader/FileUploader'; // Adjust the import path as necessary
+import {FileUploader} from '../file_uploader/FileUploader'; // Adjust the import path as necessary
 import './ButtonPassport.css';
 import {useDispatch, useSelector} from "react-redux";
 import {RootState} from "@/store/store";
 import {setPassportFile, setStatementFile} from "@/store/Slice/guestFileState";
-import ButtonPassportTakePhoto from "@/components/info_about_gest/button_passport_take_photo/ButtonPassportTakePhoto";
+import {ButtonPassportTakePhoto} from "@/components/info_about_gest/button_passport_take_photo/ButtonPassportTakePhoto";
 
 
 type ButtonPassportProps = {
@@ -14,7 +14,7 @@ type ButtonPassportProps = {
 };
 
 
-const ButtonPassport: React.FC<ButtonPassportProps> = ({onImgSelectionStatement, onFileSubmitPassport, onFileSelectionPassport}) => {
+export const ButtonPassport: React.FC<ButtonPassportProps> = ({onImgSelectionStatement, onFileSubmitPassport, onFileSelectionPassport}) => {
 
   const dispatch = useDispatch();
   const selectedFile = useSelector((state: RootState) => state.file.passportFile);
@@ -92,5 +92,3 @@ const ButtonPassport: React.FC<ButtonPassportProps> = ({onImgSelectionStatement,
       </div>
   );
 };
-
-export default ButtonPassport;

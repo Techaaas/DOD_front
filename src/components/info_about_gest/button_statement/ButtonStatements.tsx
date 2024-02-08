@@ -1,10 +1,10 @@
 import React, {useEffect, useState} from 'react';
-import FileUploader from '../file_uploader/FileUploader'; // Adjust the import path as necessary
+import {FileUploader} from '../file_uploader/FileUploader'; // Adjust the import path as necessary
 import './ButtonStatments.css';
 import {useDispatch, useSelector} from "react-redux";
 import {RootState} from "@/store/store";
 import { setStatementFile} from "@/store/Slice/guestFileState";
-import ButtonStatementsTakePhoto from "@/components/info_about_gest/button_statements_take_photo/ButtonStatementsTakePhoto";
+import {ButtonStatementsTakePhoto} from "@/components/info_about_gest/button_statements_take_photo/ButtonStatementsTakePhoto";
 import {setStatementImage} from "@/store/Slice/guestImgState";
 
 interface ButtonStatementsProps {
@@ -13,7 +13,7 @@ interface ButtonStatementsProps {
   onImgSelectionStatement: (select: boolean) => void;
 }
 
-const ButtonStatements: React.FC<ButtonStatementsProps> = ({onFileSubmitStatement, onFileSelectionStatement, onImgSelectionStatement}) => {
+export const ButtonStatements: React.FC<ButtonStatementsProps> = ({onFileSubmitStatement, onFileSelectionStatement, onImgSelectionStatement}) => {
 
   const dispatch = useDispatch();
   const selectedFile = useSelector((state: RootState) => state.file.statementFile);
@@ -91,4 +91,4 @@ const ButtonStatements: React.FC<ButtonStatementsProps> = ({onFileSubmitStatemen
   );
 };
 
-export default ButtonStatements;
+

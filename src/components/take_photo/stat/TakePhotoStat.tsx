@@ -12,7 +12,7 @@ interface TakePhotoProps {
   onFileSelectionTakePhoto?: (select: boolean) => void
 }
 
-const TakePhotoStat: FC<TakePhotoProps> = ({onFileSubmitTakePhoto, onFileSelectionTakePhoto}) => {
+export const TakePhotoStat: FC<TakePhotoProps> = ({onFileSubmitTakePhoto, onFileSelectionTakePhoto}) => {
   const [imgSrcStat, setImgSrcStat] = useState<string | null>(null);
   const webcamRef = useRef<Webcam | null>(null);
   const dispatch = useDispatch();
@@ -109,5 +109,3 @@ const TakePhotoStat: FC<TakePhotoProps> = ({onFileSubmitTakePhoto, onFileSelecti
       </div>
   );
 };
-
-export default TakePhotoStat;

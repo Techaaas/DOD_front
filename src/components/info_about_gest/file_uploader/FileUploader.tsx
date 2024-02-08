@@ -12,7 +12,7 @@ type FileUploaderProps = {
   onFileSelected: () => void;
 };
 
-const FileUploader: React.FC<FileUploaderProps> = ({type, onFileRemove, onFileSelected, onSelected}) => {
+export const FileUploader: React.FC<FileUploaderProps> = ({type, onFileRemove, onFileSelected, onSelected}) => {
   const dispatch = useDispatch();
   const statementFile = useSelector((state: RootState) => state.file.statementFile);
   const passportFile = useSelector((state: RootState) => state.file.passportFile);
@@ -106,4 +106,3 @@ const FileUploader: React.FC<FileUploaderProps> = ({type, onFileRemove, onFileSe
   );
 };
 
-export default FileUploader;

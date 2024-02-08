@@ -12,7 +12,7 @@ interface ButtonTakePhotoProps {
   onSelected: (select: boolean) => void;
 }
 
-const ButtonStatementsTakePhoto: React.FC<ButtonTakePhotoProps> = ({ type, onFileReceived, onFileRemoved, onSelected}) => {
+export const ButtonStatementsTakePhoto: React.FC<ButtonTakePhotoProps> = ({ type, onFileReceived, onFileRemoved, onSelected}) => {
   const dispatch = useDispatch();
   const statementImage = useSelector((state: RootState) => state.image.statementImage);
   const passportImage = useSelector((state: RootState) => state.image.passportImage);
@@ -78,4 +78,3 @@ const ButtonStatementsTakePhoto: React.FC<ButtonTakePhotoProps> = ({ type, onFil
   );
 };
 
-export default ButtonStatementsTakePhoto;

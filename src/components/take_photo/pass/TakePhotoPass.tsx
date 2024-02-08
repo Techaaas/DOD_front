@@ -12,7 +12,7 @@ interface TakePhotoProps {
   onFileSelectionTakePhotoPass?: (select: boolean) => void
 }
 
-const TakePhotoPass: FC<TakePhotoProps> = ({onFileSubmitTakePhotoPass, onFileSelectionTakePhotoPass}) => {
+export const TakePhotoPass: FC<TakePhotoProps> = ({onFileSubmitTakePhotoPass, onFileSelectionTakePhotoPass}) => {
   const [imgSrc, setImgSrc] = useState<string | null>(null);
   const webcamRef = useRef<Webcam | null>(null);
   const dispatch = useDispatch();
@@ -109,5 +109,3 @@ const TakePhotoPass: FC<TakePhotoProps> = ({onFileSubmitTakePhotoPass, onFileSel
       </div>
   );
 };
-
-export default TakePhotoPass;

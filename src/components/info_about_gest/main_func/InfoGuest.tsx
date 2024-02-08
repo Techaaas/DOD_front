@@ -2,8 +2,8 @@
 
 import React, {FC, useEffect, useState} from 'react';
 import './InfoGuest.css'
-import ButtonStatements from "../button_statement/ButtonStatements";
-import ButtonPassport from "../button_passport/ButtonPassport";
+import {ButtonStatements} from "../button_statement/ButtonStatements";
+import {ButtonPassport} from "../button_passport/ButtonPassport";
 import axios from 'axios';
 import {Alata} from "next/font/google";
 import {useDispatch, useSelector} from "react-redux";
@@ -16,7 +16,7 @@ interface InfoGuestProps {
 
 const alata = Alata({weight: '400', subsets: ['latin']})
 
-const InfoGuest: FC<InfoGuestProps> = ({onClose}) => {
+export const InfoGuest: FC<InfoGuestProps> = ({onClose}) => {
 
   const [isButtonStatementVisible, setIsButtonStatementVisible] = useState(false);
   const [isButtonPassportVisible, setIsButtonPassportVisible] = useState(false);
@@ -267,5 +267,3 @@ const InfoGuest: FC<InfoGuestProps> = ({onClose}) => {
       </div>
   );
 };
-
-export default InfoGuest;

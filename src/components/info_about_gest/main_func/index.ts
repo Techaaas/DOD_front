@@ -1,0 +1,1 @@
+export {InfoGuest} from './InfoGuest'

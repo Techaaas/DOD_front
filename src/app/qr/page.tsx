@@ -3,7 +3,7 @@
 import React, {useEffect, useState} from 'react';
 import './qr_scan.css';
 import {Html5Qrcode} from "html5-qrcode";
-import InfoGuest from "../../components/info_about_gest/main_func/InfoGuest";
+import {InfoGuest} from "@/components/info_about_gest/main_func";
 import {Alata} from "next/font/google";
 import { useDispatch, useSelector } from 'react-redux';
 import {setEnabledAction, toggleInfoGuestAction, toggleCameraAction} from '@/store/Action/actionQrPage';

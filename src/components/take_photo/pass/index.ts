@@ -1,0 +1,1 @@
+export {TakePhotoPass} from './TakePhotoPass'

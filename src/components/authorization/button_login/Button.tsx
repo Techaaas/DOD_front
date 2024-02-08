@@ -2,7 +2,7 @@ import "./button_login.css"
 import {Alata} from "next/font/google";
 
 const alata = Alata({weight: '400', subsets: ['latin']})
-const ButtonLink = () => {
+export const ButtonLink = () => {
   let url = "/";
   return (
       <div className="buttonLink">
@@ -12,5 +12,3 @@ const ButtonLink = () => {
       </div>
   )
 }
-
-export {ButtonLink};

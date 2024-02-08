@@ -8,7 +8,7 @@ import userData from '@/data/info_user.json'; // Путь к вашему JSON-�
 const audio = Audiowide({ weight: '400', subsets: ['latin'] });
 
 
-const TheHeader = () => {
+export const TheHeader = () => {
   const [dropdownVisible, setDropdownVisible] = useState(false);
 
   const handleDropdown = () => {
@@ -51,7 +51,6 @@ const TheHeader = () => {
   );
 };
 
-export { TheHeader };
 
 
 

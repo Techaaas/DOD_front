@@ -1,17 +1,14 @@
 import React from 'react';
-import Link from "next/link";
 import { Audiowide } from "next/font/google";
-import "./TheHeader.css"
+import "../HeaderAuth/TheHeaderAuth.css"
 
 const audio = Audiowide({ weight: '400', subsets: ['latin'] });
-const TheHeaderAuth = () => {
+export const TheHeaderAuth = () => {
   return (
       <header>
-          <Link className={audio.className} href={'/qr'}>
+          <div className={audio.className}>
             <button className="dod" >DOD</button>
-          </Link>
+          </div>
       </header>
   );
 };
-
-export { TheHeaderAuth };

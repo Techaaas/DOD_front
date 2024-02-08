@@ -12,7 +12,7 @@ interface ButtonTakePhotoProps {
   onFileRemoved: () => void; // Функция вызывается, когда файл удален
 }
 
-const ButtonPassportTakePhoto: React.FC<ButtonTakePhotoProps> = ({onSelected, type, onFileReceived, onFileRemoved }) => {
+export const ButtonPassportTakePhoto: React.FC<ButtonTakePhotoProps> = ({onSelected, type, onFileReceived, onFileRemoved }) => {
   const dispatch = useDispatch();
   const statementImage = useSelector((state: RootState) => state.image.statementImage);
   const passportImage = useSelector((state: RootState) => state.image.passportImage);
@@ -77,5 +77,3 @@ const ButtonPassportTakePhoto: React.FC<ButtonTakePhotoProps> = ({onSelected, ty
       </div>
   );
 };
-
-export default ButtonPassportTakePhoto;
