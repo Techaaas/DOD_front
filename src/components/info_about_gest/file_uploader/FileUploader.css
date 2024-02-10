@@ -16,11 +16,11 @@ input[type="file"] {
     white-space: nowrap;
 }
 
-.icon_name svg {
+.icon_name .img_icon {
     margin-right: 5px;
     margin-top: 2px;
-    width: 12px;
-    height: 12px;
+    width: 14px;
+    height: 14px;
     flex-shrink: 0;
 }
 
@@ -72,7 +72,7 @@ p {
     justify-content: center;
 }
 
-.input-file svg {
+.input-file .upload_icon{
     margin-right: 5px;
     margin-top: 1px;
 }

@@ -19,8 +19,12 @@ export default function RootLayout({
   return (
       <StoreProvider>
         <html lang="en">
+        <body className={alata.className}>
         <TheHeader/>
-        <body className={alata.className}>{children}</body>
+        <div>
+          {children}
+        </div>
+        </body>
         </html>
       </StoreProvider>
   )
